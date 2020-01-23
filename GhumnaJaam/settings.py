@@ -25,7 +25,7 @@ SECRET_KEY = 'm)2119+rays5lr2qyb(1k_*m(_dybq7^cq=9x-i1(ss)yrs(!&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['b5d3b73b.ngrok.io']
 
 
 # Application definition
@@ -37,10 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
     'accounts',
     'rest_framework',
     'phonenumber_field',
+    'trip',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -78,8 +81,12 @@ WSGI_APPLICATION = 'GhumnaJaam.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'ghumnajam',
+        'USER': 'aashish',
+        'PASSWORD': 'helloaashish321',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
