@@ -11,7 +11,21 @@ class _HotelListState extends State<HotelList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Card(
+          child: Column(
+            children: <Widget>[
+              TextField(
+                
+              ),
+            ],
+          )
+          ),
+        ],
+      )
     );
   }
 }
