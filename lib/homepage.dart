@@ -39,7 +39,14 @@ class _HomepageState extends State<Homepage> {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => LoginScreen()));
                 },
-                child: Text("Hotel page"),
+                child: Text("Login/Registration page"),
+              ),
+              FlatButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LoginScreen()));
+                },
+                child: Text(""),
               ),
             ],
           ),
