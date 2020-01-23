@@ -1,0 +1,61 @@
+[{
+        "from": "Kathmandu",
+        "to": "Bhairawa",
+        "price": "Rs. 825",
+        "time": "7 hours"
+    },
+    {
+        "from": "Kathmandu",
+        "to": "Lumbini",
+        "price": "Rs. 850",
+        "time": "8 hours"
+    },
+    {
+        "from": "Kathmandu",
+        "to": "Dang",
+        "price": "Rs. 1000",
+        "time": "11 hours"
+    },
+    {
+        "from": "Kathmandu",
+        "to": "Chitwan",
+        "price": "Rs. 600",
+        "time": "5 hours"
+    },
+    {
+        "from": "Kathmandu",
+        "to": "Taulihawa",
+        "price": "Rs. 850",
+        "time": "8 hours"
+    }, {
+        "from": "Kathmandu",
+        "to": "Krishnanagar",
+        "price": "Rs. 1000",
+        "time": "8 hours 30 minutes"
+    }, {
+        "from": "Kathmandu",
+        "to": "Palpa",
+        "price": "Rs. 900",
+        "time": "9 hours"
+    }, {
+        "from": "Kathmandu",
+        "to": "Kakarbhitta",
+        "price": "Rs. 1500",
+        "time": "11 hours"
+    }, {
+        "from": "Kathmandu",
+        "to": "Birgunj",
+        "price": "Rs. 700",
+        "time": "5 hours"
+    }, {
+        "from": "Kathmandu",
+        "to": "Bhadrapur",
+        "price": "Rs. 1400",
+        "time": "11 hours"
+    }, {
+        "from": "Kathmandu",
+        "to": "Butwal",
+        "price": "Rs. 750",
+        "time": "7 hours"
+    }
+]

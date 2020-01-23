@@ -1,0 +1,150 @@
+[{
+        "name": "Everest Base Camp Trek",
+        "destination": "Nepal",
+        "image": "assets/images/everest.jpg",
+        "trip_grade": "Moderate",
+        "placeId": "ChIJvZ69FaJU6DkRsrqrBvjcdgU",
+        "max_elevation": "5545 Meters",
+
+        "total_duration": "13 days",
+
+        "best_Time": "March - May & Sept - Dec",
+
+        "est_budget": "USD 1200",
+        "days": [{
+                "day": "1",
+                "name": "Arrive at Tribhuwan International Airport Kathmandu",
+                "lat": "27.6952226",
+                "lng": "85.3565402"
+            }, { "day": "2", "name": "Kathmandu Valley Sightseeing Tour and Preparation for the trek", "lat": "27.7089559", "lng": "85.2910274" },
+
+            { "day": "3", "name": "Fly to Lukla and Trek to Phakding (2652m/8699ft) Walking Distance - 8 km, Duration: 3 hours", "lat": "27.739392", "lng": "86.7101902" },
+            { "day": "4", "name": "Phakding to Namche Bazaar (3440m/11283) Walking Distance - 10 to 12 km, Duration: 6 hours", "lat": "27.8066815", "lng": "86.7043591" },
+            { "day": "5", "name": "Hike to Everest View Hotel (3,962m/12995ft) Walking Distance - 3 to 4 km, Duration: 3 to 4 hours", "lat": "27.816931", "lng": "86.7158946" },
+            { "day": "6", "name": "Namche to Tengboche (3860m/12660ft) Walking Distance - 10 to 11 km, Duration: 5 hours", "lat": "27.8359358", "lng": "86.7634347" },
+            { "day": "7", "name": "Tengboche to Dingboche (4410m/14464ft) Walking Distance - 11 to 12 km, Duration: 5 hours", "lat": "27.8917584", "lng": "86.8267277" },
+            { "day": "8", "name": "Dingboche to Lobuche (4910m/16105ft) Walking Distance - 11 to 12 km, Duration: 5 hours", "lat": "27.9481607", "lng": "86.808005" },
+            { "day": "9", "name": "Lobuche to Gorakshep (5180m/16990ft) - Everest Base Camp (5364m/17594ft) and back to Gorakshep, Walking Distance - 14 to 15 km, Duration- 8 hours", "lat": "27.9807397", "lng": "86.8276361" },
+            { "day": "10", "name": "Gorakshep - Kala Patthar (5545m/11283ft) then trek back to Pheriche (4210m/13810ft) Walking Distance - 13 to 14 km, Duration - 7 hours", "lat": "27.9833326", "lng": "86.8078905" },
+            { "day": "11", "name": "Pheriche to Namche (3440m/11283) Walking Distance - 14 to 15 km, Duration- 7 hours", "lat": "27.8066815", "lng": "86.7043591" },
+            { "day": "12", "name": "Namche to Lukla (2800m/9184ft) Walking Distance - 18 to 19 km, Duration - 7 hours", "lat": "27.6880785", "lng": "86.7235958" },
+            { "day": "13", "name": "Flight from Lukla to Kathmandu", "lat": "27.7089559", "lng": "85.2910274" }
+
+
+        ]
+
+    },
+    {
+        "name": "Annapurna Base Camp Trek",
+        "destination": "Nepal",
+        "image": "assets/images/annapurna.jpg",
+        "trip_grade": "Moderate",
+        "placeId": "ChIJM9MnuIj1lTkRmtZUHqvqNT8",
+        "max_elevation": "4230 Meters",
+
+        "total_duration": "8 days",
+
+        "best_Time": "March - May & Sept - Dec",
+
+        "est_budget": "USD 1000",
+        "days": [{
+                "day": "1",
+                "name": "Arrive at Tribhuwan International Airport Kathmandu",
+                "lat": "27.6952226",
+                "lng": "85.3565402"
+            }, { "day": "2", "name": "Kathmandu to Pokhara flight 30 minutes then trek to Ghandruk (1,940m/6,360ft) Duration: 6 hours", "lat": "28.4718817", "lng": "83.7003612" },
+
+            { "day": "3", "name": "Ghandruk to Sinuwa (2310m/77575ft), Duration: 6 hours", "lat": "28.4293588", "lng": "83.8227868" },
+            { "day": "4", "name": "Sinuwa to Deurali (3150m/10330ft), Duration: 6 hours", "lat": "28.4973827", "lng": "83.8960326" },
+            { "day": "5", "name": "Deurali to Annapurna Base Camp (4210m/13810ft), Duration: 5 hours", "lat": "28.5299993", "lng": "83.8692238" },
+            { "day": "6", "name": "ABC to Bamboo (2310m/7575ft), Duration: 7 hours", "lat": "28.5299809", "lng": "83.8077452" },
+            { "day": "7", "name": "Bamboo to Jhinu Danda Hot Spring (1780m/5840ft), Duration: 6 hours", "lat": "28.4094473", "lng": "83.8217381" },
+            {
+                "day": "8",
+                "name": "Jhinu Danda to Kathmandu (1370m/4495ft), Duration: 5 hours walk, 1 hour drive and 25-min flight",
+                "lat": "27.6952226",
+                "lng": "85.3565402"
+            }
+
+
+        ]
+
+    },
+    {
+        "name": "Manaslu Circuit Trek",
+        "destination": "Nepal",
+        "image": "assets/images/manaslu.jpg",
+        "trip_grade": "Tough",
+        "placeId": "ChIJre3B92XgvzkRazhdgW3NDgw",
+        "max_elevation": "5220 Meters",
+
+        "total_duration": "14 days",
+
+        "best_Time": "March - May & Sept - Nov",
+
+        "est_budget": "USD 1500",
+        "days": [{
+                "day": "1",
+                "name": "Arrive at Tribhuwan International Airport Kathmandu",
+                "lat": "27.6952226",
+                "lng": "85.3565402"
+            }, { "day": "2", "name": "Kathmandu Valley Sightseeing Tour and Preparation for the trek", "lat": "27.7089559", "lng": "85.2910274" },
+
+            { "day": "3", "name": "Drive from Kathmandu to Soti khola (710m/2328 ft) Distance: 140 kilometers, Duration: 8 hours", "lat": "28.1468443", "lng": "84.8457921" },
+            { "day": "4", "name": "Soti Khola to Machha Khola (900m/2952ft) Walking Distance: 14.2 Kilometers/8.8 Miles, Duration: 5-6 Hours", "lat": "28.2324554", "lng": "84.8739912" },
+            { "day": "5", "name": "Machha Khola to Jagat (1340m/4395ft) Walking Distance: 22.2 Kilometers/13.8 Miles, Duration: 5-6 Hours", "lat": "28.4138908", "lng": "84.4062365" },
+            { "day": "6", "name": "Jagat to Deng (2095m/6871ft) Walking Distance: 20 Kilometers/12.4 Miles, Duration: 8-9 Hours", "lat": "28.4773727", "lng": "84.8657932" },
+            { "day": "7", "name": "Deng to Namrung (2900m/9512ft) Walking Distance: 19.4 Kilometers/12 Miles, Duration: 5-6 Hours", "lat": "28.5444507", "lng": "84.7676325" },
+            { "day": "8", "name": "Namrung to Lho Gaun (3180m/10430ft) Walking Distance: 10.5 Kilometers/6.5 Miles, Duration: 5-6 Hours", "lat": "28.5384328", "lng": "84.6062255" },
+            { "day": "9", "name": "Lho Gaun to Samagaun (3500m/11480ft) Walking Distance: 8.1 Kilometers/5 Miles, Duration: 6-7 Hours", "lat": "28.6542818", "lng": "84.5898728" },
+            { "day": "10", "name": "Samagaon to Samdo (3690m/12103ft) Walking Distance: 8.1 Kilometers/5.03 Miles, Duration: 3-4 Hours", "lat": "28.6504394", "lng": "84.6334175" },
+            { "day": "11", "name": "Samdo to Dharmasala (4450m/14596ft) Walking Distance: 6.6 Kilometers/4.10 Miles, Duration: 4-5 Hours", "lat": "28.6591716", "lng": "84.5816616" },
+            { "day": "12", "name": "Dharamsala to Bhimphedi (3590m/11775ft) Via Larkya La Pass (5220m/17122ft) Walking Distance: 24.5 Kilometers/15.22 Miles, Duration: 8-9 Hours", "lat": "28.659881", "lng": "84.5140984" },
+            { "day": "13", "name": "Bhimphedi to Tilje (2300m/7544ft) Walking Distance: 26 Kilometers/16.1 Miles, Duration: 8-9 Hours", "lat": "28.433387", "lng": "84.394121" },
+            { "day": "14", "name": "Tilje to Chamje (1410m/4625ft) Walking Distance: 19.4 Kilometers/12 Miles, Duration: 6-7 Hours", "lat": "28.4380745", "lng": "84.3867516" },
+            { "day": "15", "name": "Drive from Chamje to Kathmandu by Private Vehicle, Distance 215 Kilometers/133 Miles, Duration 8-9 Hours", "lat": "27.708209", "lng": "85.3103332" }
+
+
+
+
+        ]
+
+    },
+    {
+        "name": "Langtang Trek",
+        "destination": "Nepal",
+        "image": "assets/images/langtang.jpg",
+        "trip_grade": "Moderate,Easy",
+        "placeId": "ChIJadjeRjv16jkRGR0lw0YAzug",
+        "max_elevation": "5050 Meters",
+
+        "total_duration": "9 days",
+
+        "best_Time": "March - May & Sept - Dec",
+
+        "est_budget": "USD 800",
+        "days": [{
+                "day": "1",
+                "name": "Arrive at Tribhuwan International Airport Kathmandu",
+                "lat": "27.6952226",
+                "lng": "85.3565402"
+            }, { "day": "2", "name": "Drive from Kathmandu to Syabru Bensi (1462m/4795ft) Duration: 7 Hours", "lat": "28.1693264", "lng": "85.3149373" },
+
+            { "day": "3", "name": "Syabru Bensi to Lama Hotel (2500m/8200ft) Duration: 5 Hours", "lat": "28.1615071", "lng": "85.4278797" },
+            { "day": "4", "name": "Lama Hotel to Mundu via Langtang Village (2470m/8103ft) Duration: 6 Hours", "lat": "28.2574443", "lng": "85.4619294" },
+            { "day": "5", "name": "Langtang Village to Kyanjing Gompa (3798m/12495ft) Duration: 4 Hours", "lat": "28.2149641", "lng": "85.5217677" },
+            { "day": "6", "name": "Day Hike to the Chorkari Ri (5050m/16564ft) Duration: 7 Hours", "lat": "28.2401332", "lng": "85.443702" },
+            { "day": "7", "name": "Kyanjin Gompa- Lama Hotel (2500m/8200ft) Duration: 5 Hours", "lat": "28.1621669", "lng": "85.4283187" },
+            { "day": "8", "name": "Lama Hotel - Syabru Bensi (1462m/4795ft) Duration: 5 Hours", "lat": "28.165355", "lng": "85.339259" },
+            {
+                "day": "9",
+                "name": "Syabru to Kathmandu Duration: 8 Hours",
+                "lat": "27.6952226",
+                "lng": "85.3565402"
+            }
+
+
+        ]
+
+    }
+]
