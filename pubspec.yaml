@@ -46,6 +46,7 @@ flutter:
     - assets/download.jpg
     - assets/hotelview1.jpg
     - assets/splash.jpg
+    - assets/mountains.jpg
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ghumnajaam/hotelList.dart';
+import 'login.dart';
 
 class Homepage extends StatefulWidget {
   Homepage({Key key}) : super(key: key);
@@ -35,10 +35,9 @@ class _HomepageState extends State<Homepage> {
               card(),
               card(),
               FlatButton(
-                onPressed: (){
-                  Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => HotelList()));
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LoginScreen()));
                 },
                 child: Text("Hotel page"),
               ),
