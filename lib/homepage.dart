@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ghumnajaam/hotelList.dart';
 
 class Homepage extends StatefulWidget {
   Homepage({Key key}) : super(key: key);
@@ -33,6 +34,14 @@ class _HomepageState extends State<Homepage> {
               card(),
               card(),
               card(),
+              FlatButton(
+                onPressed: (){
+                  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => HotelList()));
+                },
+                child: Text("Hotel page"),
+              ),
             ],
           ),
         ));
@@ -65,7 +74,7 @@ class _HomepageState extends State<Homepage> {
                 width: 15.0,
               ),
               Text(
-                "Hotel Name",
+                "Posted by: ",
                 style: new TextStyle(
                   fontWeight: FontWeight.w500,
                   color: Colors.black,
@@ -79,8 +88,9 @@ class _HomepageState extends State<Homepage> {
           ),
           Container(
             width: MediaQuery.of(context).size.width,
-            child: Image.asset("assets/hotelview1.jpg",
-            fit: BoxFit.fitWidth,
+            child: Image.asset(
+              "assets/hotelview1.jpg",
+              fit: BoxFit.fitWidth,
             ),
           ),
           SizedBox(
@@ -92,22 +102,36 @@ class _HomepageState extends State<Homepage> {
               SizedBox(
                 width: 12.0,
               ),
-              Icon(Icons.star_border,color: Colors.redAccent,size: 35.0,),
+              Icon(
+                Icons.star_border,
+                color: Colors.redAccent,
+                size: 35.0,
+              ),
               SizedBox(
                 width: 12.0,
               ),
-              Icon(Icons.insert_comment,color: Colors.black87,size: 35.0,),
+              Icon(
+                Icons.insert_comment,
+                color: Colors.black87,
+                size: 35.0,
+              ),
             ],
           ),
           SizedBox(
             height: 3.0,
           ),
-          Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-          style: new TextStyle(
-            color: Colors.black45,
-          ),
-          
-          textAlign: TextAlign.justify,
+          Padding(
+            padding: EdgeInsets.only(
+              left: 8.0,
+              right: 8.0,
+            ),
+            child: Text(
+              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+              style: new TextStyle(
+                color: Colors.black45,
+              ),
+              textAlign: TextAlign.justify,
+            ),
           ),
           Divider(),
         ],
