@@ -37,12 +37,22 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     'django.contrib.gis',
     'accounts',
     'rest_framework',
+    'rest_framework.authtoken',
     'phonenumber_field',
     'trip',
+    'hireguides',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DATETIME_FORMAT': "%Y-%m-%d",
+}
 
 
 MIDDLEWARE = [
@@ -129,4 +139,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR,"media")
-MEDIA_URL = '/media/'
+MEDIA_URL = 'api/media/'

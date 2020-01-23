@@ -22,4 +22,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/accounts/',include('accounts.urls')),
     path('api/trip/',include('trip.urls')),
+    path('api/hire/',include('hireguides.urls')),
 ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+
+admin.site.site_header = 'GhumnaJaam Administration'
+admin.site.index_title = 'GhumnaJaam'
+admin.site.site_title = 'Administration Dashboard'
