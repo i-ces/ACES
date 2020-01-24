@@ -2,8 +2,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ghumnaJam/authentication/authentication.dart';
-import 'package:ghumnaJam/login_bloc/login.dart';
+import 'package:ghumnajaam/authentication/authentication.dart';
+import 'package:ghumnajaam/login_bloc/login.dart';
 
 class LoginScreen extends StatefulWidget {
   final LoginBloc loginBloc;
@@ -73,7 +73,7 @@ class _LoginScreen extends State<LoginScreen> {
   }
 
   Widget build(BuildContext context) {
-    return BlocBuilder<LoginEvent, LoginState>(
+    return BlocBuilder<LoginBloc, LoginState>(
         bloc: _loginBloc,
         builder: (
           BuildContext context,
@@ -261,7 +261,7 @@ class _LoginScreen extends State<LoginScreen> {
   }
 
   _onLoginButtonPressed() {
-    _loginBloc.dispatch(LoginButtonPressed(
+    _loginBloc.add(LoginButtonPressed(
       username: _usernameController.text,
       password: _passwordController.text,
     ));

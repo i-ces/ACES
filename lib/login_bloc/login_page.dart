@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ghumnajaam/login/login.dart';
 import 'package:ghumnajaam/user_repository.dart';
 import 'package:ghumnajaam/authentication/authentication.dart';
 import 'package:ghumnajaam/login_bloc/login.dart';
@@ -40,10 +41,9 @@ class _LoginPageState extends State<LoginPage> {
             decoration: BoxDecoration(
               color: Colors.white,
             ),
-            child: Container(
-              child: Center(
-                child: Text("Login"),
-              ),
+            child: LoginScreen(
+              loginBloc: _loginBloc,
+              authenticationBloc: _authenticationBloc,
             )));
   }
 
