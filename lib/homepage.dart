@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ghumnajaam/foodpanel.dart';
 import 'login.dart';
 
 class Homepage extends StatefulWidget {
@@ -44,7 +45,7 @@ class _HomepageState extends State<Homepage> {
               FlatButton(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => LoginScreen()));
+                      MaterialPageRoute(builder: (context) => FoodPanel()));
                 },
                 child: Text("profile page"),
               ),
