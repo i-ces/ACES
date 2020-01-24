@@ -15,7 +15,7 @@ class AccountRepository {
     String _headersKey = "Authorization";
     String _headersValue = "Token " + token;
     print(_headersValue);
-    await http.get("https://b5d3b73b.ngrok.io/api/accounts/profile/", headers: {
+    await http.get("https://4fd81aa6.ngrok.io/api/accounts/profile/", headers: {
       _headersKey: _headersValue,
       'Content-Type': 'application/json'
     }).then((http.Response response) {
@@ -55,7 +55,7 @@ class AccountRepository {
   }
 
   Future<List<AccountModel>> fetchGuides() async {
-    await http.get("https://b5d3b73b.ngrok.io/api/accounts/topguides/",
+    await http.get("https://4fd81aa6.ngrok.io/api/accounts/topguides/",
         headers: {
           'Content-Type': 'application/json'
         }).then((http.Response response) {
@@ -85,7 +85,7 @@ class AccountRepository {
 
   Future<List<AccountModel>> fetchSelectedGuides(double lat, double lng) async {
     await http.get(
-        "https://b5d3b73b.ngrok.io/api/accounts/guides/?latitude=$lat&longitude=$lng",
+        "https://4fd81aa6.ngrok.io/api/accounts/guides/?latitude=$lat&longitude=$lng",
         headers: {
           'Content-Type': 'application/json',
         }).then((http.Response response) {

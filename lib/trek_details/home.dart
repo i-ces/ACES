@@ -44,22 +44,12 @@ class _OffHome extends State<OffHome> {
     return Scaffold(
         body: Stack(
       children: <Widget>[
-        // Padding(
-        //   child: Container(
-        //       height: 200,
-        //       child: Image.asset(
-        //         "assets/images/logo.jpg",
-        //         fit: BoxFit.contain,
-        //       )),
-        //   padding:
-        //       EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.8),
-        // ),
         Container(
           height: MediaQuery.of(context).size.height * 0.4,
           width: MediaQuery.of(context).size.width,
           //    color: Colors.blue,
           decoration: BoxDecoration(
-              color: Colors.blue,
+              color: Colors.redAccent,
               image: DecorationImage(
                   fit: BoxFit.contain,
                   image: AssetImage("assets/images/visitnepal.png"))),

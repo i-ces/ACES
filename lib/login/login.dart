@@ -97,7 +97,7 @@ class _LoginScreen extends State<LoginScreen> {
                 clipper: MyClipper(),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Color.fromRGBO(63, 169, 245, 1),
+                    color: Colors.redAccent,
                     image: DecorationImage(
                       colorFilter: new ColorFilter.mode(
                           Colors.black.withOpacity(0.4), BlendMode.dstATop),
@@ -227,8 +227,8 @@ class _LoginScreen extends State<LoginScreen> {
                                 shape: new RoundedRectangleBorder(
                                     borderRadius:
                                         new BorderRadius.circular(30.0)),
-                                splashColor: Color.fromRGBO(63, 169, 245, 1),
-                                color: Color.fromRGBO(63, 169, 245, 1),
+                                splashColor: Colors.redAccent,
+                                color: Colors.redAccent,
                                 child: new Row(
                                   children: <Widget>[
                                     new Padding(

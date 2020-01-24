@@ -4,10 +4,10 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ghumnaJam/authentication/authentication.dart';
-import 'package:ghumnaJam/login/SignUp.dart';
-import 'package:ghumnaJam/login_bloc/login.dart';
-import 'package:ghumnaJam/src/user_repository.dart';
+import 'package:ghumnajaam/authentication/authentication.dart';
+import 'package:ghumnajaam/login/SignUp.dart';
+import 'package:ghumnajaam/login_bloc/login.dart';
+import 'package:ghumnajaam/src/user_repository.dart';
 import 'package:image_picker/image_picker.dart';
 
 class TouristSignUpPage extends StatefulWidget {
@@ -65,7 +65,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
       controller: _emailController,
       decoration: InputDecoration(
         border: InputBorder.none,
-        hintText: 'ghumnajam@example.com',
+        hintText: 'ghumnajaam@example.com',
         hintStyle: TextStyle(color: Colors.grey),
       ),
       validator: (String value) {
@@ -190,7 +190,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
               child: Center(
                 child: Icon(
                   Icons.map,
-                  color: Color.fromRGBO(63, 169, 245, 1),
+                  color: Colors.redAccent,
                   size: 50.0,
                 ),
               ),
@@ -208,7 +208,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
                             "FIRST NAME",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -224,7 +224,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               width: 0.5,
                               style: BorderStyle.solid),
                         ),
@@ -243,7 +243,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
                             "LAST NAME",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -259,7 +259,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               width: 0.5,
                               style: BorderStyle.solid),
                         ),
@@ -278,7 +278,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
                             "EMAIL",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -294,7 +294,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               width: 0.5,
                               style: BorderStyle.solid),
                         ),
@@ -313,7 +313,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
                             'USERNAME',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -329,7 +329,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               width: 0.5,
                               style: BorderStyle.solid),
                         ),
@@ -348,7 +348,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
                             "PASSWORD",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -364,7 +364,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               width: 0.5,
                               style: BorderStyle.solid),
                         ),
@@ -383,7 +383,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
                             "TOURIST PROFILE",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 20.0,
                             ),
                           ),
@@ -403,7 +403,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
                             "PHONE NUMBER",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -419,7 +419,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               width: 0.5,
                               style: BorderStyle.solid),
                         ),
@@ -438,7 +438,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
                             "PROFILE PIC",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -455,7 +455,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
                     child: Center(
                       child: IconButton(
                         icon: Icon(Icons.camera_alt),
-                        color: Color.fromRGBO(63, 169, 245, 1),
+                        color: Colors.redAccent,
                         onPressed: () {
                           loadAssets();
                         },
@@ -482,7 +482,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
                             "BIO",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -498,7 +498,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               width: 0.5,
                               style: BorderStyle.solid),
                         ),
@@ -519,8 +519,8 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
                               : null,
                           shape: new RoundedRectangleBorder(
                               borderRadius: new BorderRadius.circular(30.0)),
-                          splashColor: Color.fromRGBO(63, 169, 245, 1),
-                          color: Color.fromRGBO(63, 169, 245, 1),
+                          splashColor: Colors.redAccent,
+                          color: Colors.redAccent,
                           child: new Row(
                             children: <Widget>[
                               new Padding(
@@ -548,7 +548,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
           ]);
     }
 
-    return BlocBuilder<LoginEvent, LoginState>(
+    return BlocBuilder<LoginBloc, LoginState>(
         bloc: _loginBloc,
         builder: (
           BuildContext context,
@@ -567,7 +567,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
                         child: Text('Okay'),
                         onPressed: () {
                           Navigator.of(context).pop();
-                          _loginBloc.dispatch(ErrorButton());
+                          _loginBloc.add(ErrorButton());
                         },
                       )
                     ],
@@ -618,7 +618,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
       return;
     }
     _formKey.currentState.save();
-    _loginBloc.dispatch(TouristSignUpButtonPressed(
+    _loginBloc.add(TouristSignUpButtonPressed(
         firstName: _firstnameController.text,
         lastName: _lastnameController.text,
         email: _emailController.text,

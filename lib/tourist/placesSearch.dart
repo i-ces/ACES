@@ -79,13 +79,13 @@ class _PlacesSearch extends State<PlacesSearch> {
                       borderRadius: BorderRadius.circular(40),
                       child: RaisedButton(
                         onPressed: null,
-                        disabledColor: Color.fromRGBO(63, 169, 245, 1),
+                        disabledColor: Colors.redAccent,
                         disabledElevation: 10.0,
                         child: Text(
                           "TOP GUIDES",
                           style: TextStyle(color: Colors.white),
                         ),
-                        color: Color.fromRGBO(63, 169, 245, 1),
+                        color: Colors.redAccent,
                       ),
                     )),
                 SingleChildScrollView(

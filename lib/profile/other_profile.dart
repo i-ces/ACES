@@ -137,15 +137,12 @@ class _OtherProfilePage extends State<OtherProfilePage> {
   }
 
   Widget _buildToTextField() {
-    return DateTimePickerFormField(
-      inputType: InputType.date,
+    return DateTimeField(
       format: DateFormat('yyyy-MM-dd'),
-      editable: true,
       decoration: InputDecoration(
         labelText: 'To',
         hasFloatingPlaceholder: false,
       ),
-      dateOnly: true,
       validator: (DateTime value) {
         if (value.toString().isEmpty) {
           return 'Please enter a valid date';
@@ -176,7 +173,7 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                                 "RATE THE GUIDE",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  color: Color.fromRGBO(63, 169, 245, 1),
+                                  color: Colors.redAccent,
                                   fontSize: 15.0,
                                 ),
                               ),
@@ -204,7 +201,7 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                                 "REVIEW",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  color: Color.fromRGBO(63, 169, 245, 1),
+                                  color: Colors.redAccent,
                                   fontSize: 15.0,
                                 ),
                               ),
@@ -220,7 +217,7 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                           decoration: BoxDecoration(
                             border: Border(
                               bottom: BorderSide(
-                                  color: Color.fromRGBO(63, 169, 245, 1),
+                                  color: Colors.redAccent,
                                   width: 0.5,
                                   style: BorderStyle.solid),
                             ),
@@ -250,13 +247,13 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                                   "rating": _userRating
                                 };
                                 await http.get(
-                                    "http://ec2-52-87-169-94.compute-1.amazonaws.com/api/accounts/guides/rate/?guideid=${widget.model.id}&rating=$_userRating",
+                                    "https://4fd81aa6.ngrok.io/api/accounts/guides/rate/?guideid=${widget.model.id}&rating=$_userRating",
                                     headers: {
                                       _headersKey: _headersValue,
                                       'Content-Type': 'application/json'
                                     });
                                 await http.post(
-                                    "http://ec2-52-87-169-94.compute-1.amazonaws.com/api/accounts/review/create/",
+                                    "https://4fd81aa6.ngrok.io/api/accounts/review/create/",
                                     body: json.encode(authData),
                                     headers: {
                                       _headersKey: _headersValue,
@@ -294,7 +291,7 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                               "MESSAGE TO GUIDE",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                color: Color.fromRGBO(63, 169, 245, 1),
+                                color: Colors.redAccent,
                                 fontSize: 15.0,
                               ),
                             ),
@@ -310,7 +307,7 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                         decoration: BoxDecoration(
                           border: Border(
                             bottom: BorderSide(
-                                color: Color.fromRGBO(63, 169, 245, 1),
+                                color: Colors.redAccent,
                                 width: 0.5,
                                 style: BorderStyle.solid),
                           ),
@@ -329,7 +326,7 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                               "FROM",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                color: Color.fromRGBO(63, 169, 245, 1),
+                                color: Colors.redAccent,
                                 fontSize: 15.0,
                               ),
                             ),
@@ -345,7 +342,7 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                         decoration: BoxDecoration(
                           border: Border(
                             bottom: BorderSide(
-                                color: Color.fromRGBO(63, 169, 245, 1),
+                                color: Colors.redAccent,
                                 width: 0.5,
                                 style: BorderStyle.solid),
                           ),
@@ -364,7 +361,7 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                               "UPTO DATE",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                color: Color.fromRGBO(63, 169, 245, 1),
+                                color: Colors.redAccent,
                                 fontSize: 15.0,
                               ),
                             ),
@@ -380,7 +377,7 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                         decoration: BoxDecoration(
                           border: Border(
                             bottom: BorderSide(
-                                color: Color.fromRGBO(63, 169, 245, 1),
+                                color: Colors.redAccent,
                                 width: 0.5,
                                 style: BorderStyle.solid),
                           ),
@@ -393,7 +390,7 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                       children: <Widget>[
                         RaisedButton(
                           padding: EdgeInsets.only(right: 10.0),
-                          color: Color.fromRGBO(63, 169, 245, 1),
+                          color: Colors.redAccent,
                           child: Text(
                             'Okay',
                             style: TextStyle(color: Colors.white),
@@ -417,7 +414,7 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                             };
                             print(widget.model.id);
                             http.Response response = await http.post(
-                                "http://ec2-52-87-169-94.compute-1.amazonaws.com/api/hire/request/",
+                                "https://4fd81aa6.ngrok.io/api/hire/request/",
                                 body: json.encode(authData),
                                 headers: {
                                   _headersKey: _headersValue,
@@ -637,7 +634,7 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                     style: TextStyle(
                         fontFamily: 'Roboto',
                         fontSize: 16.0,
-                        color: Color.fromRGBO(63, 169, 245, 1)),
+                        color: Colors.redAccent),
                   ),
                   SizedBox(height: 10.0),
                   Text(
@@ -691,7 +688,7 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                               String _headersValue = "Token " + token;
 
                               await http.get(
-                                  "http://ec2-52-87-169-94.compute-1.amazonaws.com/api/hire/approve/?hireid=${widget.model.reqId}",
+                                  "https://4fd81aa6.ngrok.io/api/hire/approve/?hireid=${widget.model.reqId}",
                                   headers: {
                                     _headersKey: _headersValue,
                                     'Content-Type': 'application/json'
@@ -704,9 +701,8 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                       child: Container(
                         height: 40.0,
                         decoration: BoxDecoration(
-                          border: Border.all(
-                              color: Color.fromRGBO(63, 169, 245, 1)),
-                          color: Color.fromRGBO(63, 169, 245, 1),
+                          border: Border.all(color: Colors.redAccent),
+                          color: Colors.redAccent,
                         ),
                         child: Center(
                           child: Text(
@@ -731,8 +727,7 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                       child: Container(
                         height: 40.0,
                         decoration: BoxDecoration(
-                          border: Border.all(
-                              color: Color.fromRGBO(63, 169, 245, 1)),
+                          border: Border.all(color: Colors.redAccent),
                         ),
                         child: Center(
                           child: Padding(
@@ -741,7 +736,7 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                               "FEEDS",
                               style: TextStyle(
                                   fontWeight: FontWeight.w600,
-                                  color: Color.fromRGBO(63, 169, 245, 1)),
+                                  color: Colors.redAccent),
                             ),
                           ),
                         ),
@@ -766,9 +761,8 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                           child: Container(
                             height: 40.0,
                             decoration: BoxDecoration(
-                              border: Border.all(
-                                  color: Color.fromRGBO(63, 169, 245, 1)),
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              border: Border.all(color: Colors.redAccent),
+                              color: Colors.redAccent,
                             ),
                             child: Center(
                               child: Text(
@@ -793,8 +787,7 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                           child: Container(
                             height: 40.0,
                             decoration: BoxDecoration(
-                              border: Border.all(
-                                  color: Color.fromRGBO(63, 169, 245, 1)),
+                              border: Border.all(color: Colors.redAccent),
                             ),
                             child: Center(
                               child: Padding(
@@ -803,7 +796,7 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                                   "FEEDS",
                                   style: TextStyle(
                                       fontWeight: FontWeight.w600,
-                                      color: Color.fromRGBO(63, 169, 245, 1)),
+                                      color: Colors.redAccent),
                                 ),
                               ),
                             ),
@@ -820,9 +813,8 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                           child: Container(
                             height: 40.0,
                             decoration: BoxDecoration(
-                              border: Border.all(
-                                  color: Color.fromRGBO(63, 169, 245, 1)),
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              border: Border.all(color: Colors.redAccent),
+                              color: Colors.redAccent,
                             ),
                             child: Center(
                               child: Text(
@@ -852,8 +844,7 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                         child: Container(
                           height: 40.0,
                           decoration: BoxDecoration(
-                            border: Border.all(
-                                color: Color.fromRGBO(63, 169, 245, 1)),
+                            border: Border.all(color: Colors.redAccent),
                           ),
                           child: Center(
                             child: Padding(
@@ -862,7 +853,7 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                                 "REVIEWS",
                                 style: TextStyle(
                                     fontWeight: FontWeight.w600,
-                                    color: Color.fromRGBO(63, 169, 245, 1)),
+                                    color: Colors.redAccent),
                               ),
                             ),
                           ),
@@ -956,7 +947,7 @@ class _OtherProfilePage extends State<OtherProfilePage> {
     }
 
     return Scaffold(
-      backgroundColor: Color.fromRGBO(63, 169, 245, 1),
+      backgroundColor: Colors.redAccent,
       body: Card(
           child: Column(
         children: <Widget>[

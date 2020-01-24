@@ -144,7 +144,7 @@ class _MyTrip extends State<MyTrip> {
               child: Center(
                 child: Icon(
                   Icons.map,
-                  color: Color.fromRGBO(63, 169, 245, 1),
+                  color: Colors.redAccent,
                   size: 50.0,
                 ),
               ),
@@ -162,7 +162,7 @@ class _MyTrip extends State<MyTrip> {
                             "LOCATION",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -178,7 +178,7 @@ class _MyTrip extends State<MyTrip> {
                     decoration: BoxDecoration(
                       border: Border(
                         bottom: BorderSide(
-                            color: Color.fromRGBO(63, 169, 245, 1),
+                            color: Colors.redAccent,
                             width: 0.5,
                             style: BorderStyle.solid),
                       ),
@@ -200,7 +200,7 @@ class _MyTrip extends State<MyTrip> {
                             "No of days of Trip",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -216,7 +216,7 @@ class _MyTrip extends State<MyTrip> {
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               width: 0.5,
                               style: BorderStyle.solid),
                         ),
@@ -235,7 +235,7 @@ class _MyTrip extends State<MyTrip> {
                             "IMAGES OF THE PLACE",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -252,7 +252,7 @@ class _MyTrip extends State<MyTrip> {
                     child: Center(
                       child: IconButton(
                         icon: Icon(Icons.camera_alt),
-                        color: Color.fromRGBO(63, 169, 245, 1),
+                        color: Colors.redAccent,
                         onPressed: () {
                           loadAssets();
                         },
@@ -279,7 +279,7 @@ class _MyTrip extends State<MyTrip> {
                             "Description",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -295,7 +295,7 @@ class _MyTrip extends State<MyTrip> {
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               width: 0.5,
                               style: BorderStyle.solid),
                         ),
@@ -314,7 +314,7 @@ class _MyTrip extends State<MyTrip> {
                             "RATE THE PLACE",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -363,8 +363,8 @@ class _MyTrip extends State<MyTrip> {
                               : null,
                           shape: new RoundedRectangleBorder(
                               borderRadius: new BorderRadius.circular(30.0)),
-                          splashColor: Color.fromRGBO(63, 169, 245, 1),
-                          color: Color.fromRGBO(63, 169, 245, 1),
+                          splashColor: Colors.redAccent,
+                          color: Colors.redAccent,
                           child: new Row(
                             children: <Widget>[
                               new Padding(
@@ -390,7 +390,7 @@ class _MyTrip extends State<MyTrip> {
         appBar: AppBar(
           title: Text("My Trip"),
           elevation: 0.0,
-          backgroundColor: Color.fromRGBO(63, 169, 245, 1),
+          backgroundColor: Colors.redAccent,
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.map),
@@ -432,7 +432,7 @@ class _MyTrip extends State<MyTrip> {
               }
               return Container(
                 height: MediaQuery.of(context).size.height,
-                color: Color.fromRGBO(63, 169, 245, 1),
+                color: Colors.redAccent,
                 child: ListView(
                   shrinkWrap: true,
                   scrollDirection: Axis.vertical,

@@ -72,11 +72,11 @@ class _ReviewPage extends State<ReviewPage> {
         appBar: AppBar(
           elevation: 0.0,
           title: Text(widget.name, textAlign: TextAlign.center),
-          backgroundColor: Color.fromRGBO(63, 169, 245, 1),
+          backgroundColor: Colors.redAccent,
         ),
         body: Container(
             height: MediaQuery.of(context).size.height,
-            color: Color.fromRGBO(63, 169, 245, 1),
+            color: Colors.redAccent,
             child: _reviewView(context, TripRepository())));
   }
 }

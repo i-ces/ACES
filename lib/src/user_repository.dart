@@ -41,7 +41,7 @@ class UserRepository {
       http.Response response2;
 
       response = await http.post(
-        'https://b5d3b73b.ngrok.io/api/accounts/login/',
+        'https://4fd81aa6.ngrok.io/api/accounts/login/',
         body: json.encode(authData),
         headers: {'Content-Type': 'application/json'},
       );
@@ -53,7 +53,7 @@ class UserRepository {
         String _headersValue = "Token " + responseData['token'];
 
         response2 = await http.get(
-          'https://b5d3b73b.ngrok.io/api/accounts/flag/',
+          'https://4fd81aa6.ngrok.io/api/accounts/flag/',
           headers: {
             _headersKey: _headersValue,
             'Content-Type': 'application/json'
@@ -115,7 +115,7 @@ class UserRepository {
       {String imagePath}) async {
     final mimeTypeData = lookupMimeType(image.path).split('/');
     final imageUploadRequest = http.MultipartRequest('POST',
-        Uri.parse('https://b5d3b73b.ngrok.io/api/accounts/profilepicture/'));
+        Uri.parse('https://4fd81aa6.ngrok.io/api/accounts/profilepicture/'));
     final file = await http.MultipartFile.fromPath(
       'profile_pic',
       image.path,
@@ -167,7 +167,7 @@ class UserRepository {
         'latitude': lattitude,
         'longitude': longitude,
         'profile_pic':
-            "https://b5d3b73b.ngrok.io" + uploadedData['profile_pic'],
+            "https://4fd81aa6.ngrok.io" + uploadedData['profile_pic'],
         'bio': bio,
         "rating": 0.0,
         "pricing": price,
@@ -184,7 +184,7 @@ class UserRepository {
       };
 
       await http.post(
-        'https://b5d3b73b.ngrok.io/api/accounts/guide/signup/',
+        'https://4fd81aa6.ngrok.io/api/accounts/guide/signup/',
         body: json.encode(authData),
         headers: {'Content-Type': 'application/json'},
       ).then((http.Response response) {
@@ -218,7 +218,7 @@ class UserRepository {
       final Map<String, dynamic> profile = {
         'phone_number': phone,
         'profile_pic':
-            "https://b5d3b73b.ngrok.io/" + uploadedData['profile_pic'],
+            "https://4fd81aa6.ngrok.io/" + uploadedData['profile_pic'],
         'bio': bio,
         "is_tourist": true
       };
@@ -232,7 +232,7 @@ class UserRepository {
       };
 
       await http.post(
-        'https://b5d3b73b.ngrok.io/api/accounts/tourist/signup/',
+        'https://4fd81aa6.ngrok.io/api/accounts/tourist/signup/',
         body: json.encode(authData),
         headers: {'Content-Type': 'application/json'},
       ).then((http.Response response) {

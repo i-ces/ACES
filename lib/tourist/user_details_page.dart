@@ -11,7 +11,7 @@ class UserDetailsPage extends StatelessWidget {
         begin: FractionalOffset.centerRight,
         end: FractionalOffset.topRight,
         colors: <Color>[
-          Color.fromRGBO(63, 169, 245, 1),
+          Colors.redAccent,
           const Color(0xFF2B264A),
         ],
       ),

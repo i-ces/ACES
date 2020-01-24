@@ -5,7 +5,7 @@ import 'package:google_maps_webservice/places.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-const kGoogleApiKey = "AIzaSyCqOpyZcoDGRaOk10J46AVLfBHdWXVdn0g";
+const kGoogleApiKey = "AIzaSyBfecbv7_Q3gvbif7vhRs7VEmhwgkJxoWI";
 GoogleMapsPlaces _places = GoogleMapsPlaces(apiKey: kGoogleApiKey);
 
 class GuideListWidget extends StatefulWidget {
@@ -74,7 +74,7 @@ class GuideListState extends State<GuideListWidget> {
           Expanded(
               child: Container(
             height: MediaQuery.of(context).size.height * 0.5,
-            color: Color.fromRGBO(63, 169, 245, 1),
+            color: Colors.redAccent,
             padding: EdgeInsets.all(20),
             child: Card(
               child: guideList(lat, lng),
@@ -87,7 +87,7 @@ class GuideListState extends State<GuideListWidget> {
     return Scaffold(
         appBar: AppBar(
           title: Text(title),
-          backgroundColor: Color.fromRGBO(63, 169, 245, 1),
+          backgroundColor: Colors.redAccent,
           elevation: 0,
         ),
         body: bodyChild);

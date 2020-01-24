@@ -52,10 +52,10 @@ class _NearbyPlaces extends State<NearbyPlaces> {
             },
           )
         ],
-        backgroundColor: Color.fromRGBO(63, 169, 245, 1),
+        backgroundColor: Colors.redAccent,
       ),
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Color.fromRGBO(63, 169, 245, 1),
+        backgroundColor: Colors.redAccent,
         height: 54.4,
         items: <Widget>[
           Icon(Icons.local_hotel, size: 30),
@@ -111,7 +111,7 @@ class _NearbyPlaces extends State<NearbyPlaces> {
       Prediction p = await PlacesAutocomplete.show(
           context: context,
           strictbounds: center == null ? false : true,
-          apiKey: 'AIzaSyCqOpyZcoDGRaOk10J46AVLfBHdWXVdn0g',
+          apiKey: 'AIzaSyBfecbv7_Q3gvbif7vhRs7VEmhwgkJxoWI',
           mode: Mode.overlay,
           language: "en",
           location: center == null

@@ -130,7 +130,7 @@ class _GMap extends State<GMap> {
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           return snapshot.data == null
               ? Container(
-                  color: Color.fromRGBO(63, 169, 245, 1),
+                  color: Colors.redAccent,
                 )
               : Column(
                   children: <Widget>[
@@ -140,7 +140,7 @@ class _GMap extends State<GMap> {
                     Expanded(
                       child: Container(
                           padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
-                          color: Color.fromRGBO(63, 169, 245, 1),
+                          color: Colors.redAccent,
                           child: ListView.builder(
                               dragStartBehavior: DragStartBehavior.down,
                               physics: AlwaysScrollableScrollPhysics(),
@@ -189,7 +189,7 @@ class _GMap extends State<GMap> {
 
   Future<List<Place>> getNearbyPlaces() async {
     http.Response response = await http.get(
-        "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${widget.userLocation.latitude},${widget.userLocation.longitude}&radius=2500&type=${widget.type}&key=AIzaSyCqOpyZcoDGRaOk10J46AVLfBHdWXVdn0g",
+        "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${widget.userLocation.latitude},${widget.userLocation.longitude}&radius=2500&type=${widget.type}&key=AIzaSyBfecbv7_Q3gvbif7vhRs7VEmhwgkJxoWI",
         headers: {"Accept": "application/json"});
 
     List data = json.decode(response.body)["results"];
@@ -220,7 +220,7 @@ class _GMap extends State<GMap> {
           polylineId: PolylineId(_myPlace.toString()),
           width: 10,
           points: convertToLatLng(decodePoly(encondedPoly)),
-          color: Color.fromRGBO(63, 169, 245, 1)));
+          color: Colors.redAccent));
     });
   }
 

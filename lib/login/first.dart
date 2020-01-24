@@ -61,8 +61,8 @@ class _FirstScreen extends State<FirstScreen> with TickerProviderStateMixin {
                         borderRadius: BorderRadius.only(
                             bottomRight: Radius.circular(28.0),
                             topRight: Radius.circular(28.0))),
-                    splashColor: Color.fromRGBO(63, 169, 245, 1),
-                    color: Color.fromRGBO(63, 169, 245, 1),
+                    splashColor: Colors.redAccent,
+                    color: Colors.redAccent,
                     child: new Row(
                       children: <Widget>[
                         new Padding(
@@ -85,8 +85,8 @@ class _FirstScreen extends State<FirstScreen> with TickerProviderStateMixin {
                                   borderRadius: BorderRadius.only(
                                       bottomRight: Radius.circular(28.0),
                                       topRight: Radius.circular(28.0))),
-                              splashColor: Color.fromRGBO(63, 169, 245, 1),
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              splashColor: Colors.redAccent,
+                              color: Colors.redAccent,
                               child: Icon(
                                 Icons.arrow_back,
                                 color: Colors.white,
@@ -114,8 +114,8 @@ class _FirstScreen extends State<FirstScreen> with TickerProviderStateMixin {
                         borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(28.0),
                             topLeft: Radius.circular(28.0))),
-                    splashColor: Color.fromRGBO(63, 169, 245, 1),
-                    color: Color.fromRGBO(63, 169, 245, 1),
+                    splashColor: Colors.redAccent,
+                    color: Colors.redAccent,
                     child: new Row(
                       children: <Widget>[
                         new Transform.translate(
@@ -127,8 +127,8 @@ class _FirstScreen extends State<FirstScreen> with TickerProviderStateMixin {
                                   borderRadius: BorderRadius.only(
                                       bottomLeft: Radius.circular(28.0),
                                       topLeft: Radius.circular(28.0))),
-                              splashColor: Color.fromRGBO(63, 169, 245, 1),
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              splashColor: Colors.redAccent,
+                              color: Colors.redAccent,
                               child: Icon(
                                 Icons.arrow_forward,
                                 color: Colors.white,

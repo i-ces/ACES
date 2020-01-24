@@ -262,7 +262,7 @@ class _UserProfilePage extends State<UserProfilePage> {
                         height: 40.0,
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: Color.fromRGBO(63, 169, 245, 1),
+                            color: Colors.redAccent,
                           ),
                         ),
                         child: Center(
@@ -272,7 +272,7 @@ class _UserProfilePage extends State<UserProfilePage> {
                               "FEEDS",
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
-                                color: Color.fromRGBO(63, 169, 245, 1),
+                                color: Colors.redAccent,
                               ),
                             ),
                           ),
@@ -291,7 +291,7 @@ class _UserProfilePage extends State<UserProfilePage> {
                         height: 40.0,
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: Color.fromRGBO(63, 169, 245, 1),
+                            color: Colors.redAccent,
                           ),
                         ),
                         child: Center(
@@ -301,7 +301,7 @@ class _UserProfilePage extends State<UserProfilePage> {
                               "REQUESTS",
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
-                                color: Color.fromRGBO(63, 169, 245, 1),
+                                color: Colors.redAccent,
                               ),
                             ),
                           ),
@@ -329,7 +329,7 @@ class _UserProfilePage extends State<UserProfilePage> {
                         height: 40.0,
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: Color.fromRGBO(63, 169, 245, 1),
+                            color: Colors.redAccent,
                           ),
                         ),
                         child: Center(
@@ -339,7 +339,7 @@ class _UserProfilePage extends State<UserProfilePage> {
                               "REVIEWS",
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
-                                color: Color.fromRGBO(63, 169, 245, 1),
+                                color: Colors.redAccent,
                               ),
                             ),
                           ),
@@ -356,7 +356,7 @@ class _UserProfilePage extends State<UserProfilePage> {
                         height: 40.0,
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: Color.fromRGBO(63, 169, 245, 1),
+                            color: Colors.redAccent,
                           ),
                         ),
                         child: Center(
@@ -366,7 +366,7 @@ class _UserProfilePage extends State<UserProfilePage> {
                               "FEEDS",
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
-                                color: Color.fromRGBO(63, 169, 245, 1),
+                                color: Colors.redAccent,
                               ),
                             ),
                           ),
@@ -385,7 +385,7 @@ class _UserProfilePage extends State<UserProfilePage> {
                         height: 40.0,
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: Color.fromRGBO(63, 169, 245, 1),
+                            color: Colors.redAccent,
                           ),
                         ),
                         child: Center(
@@ -395,7 +395,7 @@ class _UserProfilePage extends State<UserProfilePage> {
                               "REQUESTS",
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
-                                color: Color.fromRGBO(63, 169, 245, 1),
+                                color: Colors.redAccent,
                               ),
                             ),
                           ),
@@ -422,9 +422,9 @@ class _UserProfilePage extends State<UserProfilePage> {
                   height: 40.0,
                   decoration: BoxDecoration(
                     border: Border.all(
-                      color: Color.fromRGBO(63, 169, 245, 1),
+                      color: Colors.redAccent,
                     ),
-                    color: Color.fromRGBO(63, 169, 245, 1),
+                    color: Colors.redAccent,
                   ),
                   child: Center(
                     child: Text(
@@ -548,7 +548,7 @@ class _UserProfilePage extends State<UserProfilePage> {
                                       borderRadius: BorderRadius.only(
                                           bottomLeft: Radius.circular(28.0),
                                           topLeft: Radius.circular(28.0))),
-                                  splashColor: Color.fromRGBO(63, 169, 245, 1),
+                                  splashColor: Colors.redAccent,
                                   color: Colors.red,
                                   child: new Row(children: <Widget>[
                                     new Padding(
@@ -582,7 +582,7 @@ class _UserProfilePage extends State<UserProfilePage> {
                                                     String _headersValue =
                                                         "Token " + token;
                                                     await http.get(
-                                                        'http://ec2-52-87-169-94.compute-1.amazonaws.com/api/accounts/emergency/?latitude=${userLocation.latitude}&longitude=${userLocation.longitude}',
+                                                        'https://4fd81aa6.ngrok.io/api/accounts/emergency/?latitude=${userLocation.latitude}&longitude=${userLocation.longitude}',
                                                         headers: {
                                                           _headersKey:
                                                               _headersValue,

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-const kGoogleApiKey = "AIzaSyCqOpyZcoDGRaOk10J46AVLfBHdWXVdn0g";
+const kGoogleApiKey = "AIzaSyBfecbv7_Q3gvbif7vhRs7VEmhwgkJxoWI";
 GoogleMapsPlaces _places = GoogleMapsPlaces(apiKey: kGoogleApiKey);
 
 class PlaceDetailWidget extends StatefulWidget {
@@ -74,7 +74,7 @@ class PlaceDetailState extends State<PlaceDetailWidget> {
           Expanded(
               child: Container(
             height: MediaQuery.of(context).size.height * 0.5,
-            color: Color.fromRGBO(63, 169, 245, 1),
+            color: Colors.redAccent,
             padding: EdgeInsets.all(20),
             child: Card(
               child: buildPlaceDetailList(placeDetail),
@@ -87,7 +87,7 @@ class PlaceDetailState extends State<PlaceDetailWidget> {
     return Scaffold(
         appBar: AppBar(
           title: Text(title),
-          backgroundColor: Color.fromRGBO(63, 169, 245, 1),
+          backgroundColor: Colors.redAccent,
           elevation: 0,
         ),
         body: bodyChild);
@@ -276,7 +276,7 @@ class PlaceDetailState extends State<PlaceDetailWidget> {
                 child: Container(
                   height: 40.0,
                   decoration: BoxDecoration(
-                    border: Border.all(color: Color.fromRGBO(63, 169, 245, 1)),
+                    border: Border.all(color: Colors.redAccent),
                   ),
                   child: Center(
                     child: Padding(
@@ -285,7 +285,7 @@ class PlaceDetailState extends State<PlaceDetailWidget> {
                         "FEEDS",
                         style: TextStyle(
                             fontWeight: FontWeight.w600,
-                            color: Color.fromRGBO(63, 169, 245, 1)),
+                            color: Colors.redAccent),
                       ),
                     ),
                   ),

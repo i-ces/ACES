@@ -153,7 +153,7 @@ class _GuideMap extends State<GuideMap> {
                     Expanded(
                       child: Container(
                           padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
-                          color: Color.fromRGBO(63, 169, 245, 1),
+                          color: Colors.redAccent,
                           child: ListView.builder(
                               dragStartBehavior: DragStartBehavior.down,
                               physics: AlwaysScrollableScrollPhysics(),
@@ -201,7 +201,7 @@ class _GuideMap extends State<GuideMap> {
   Future<List<AccountModel>> fetchSelectedGuides(double lat, double lng) async {
     List<AccountModel> _accountList = [];
     await http.get(
-        "http://ec2-52-87-169-94.compute-1.amazonaws.com/api/accounts/guides/?latitude=$lat&longitude=$lng",
+        "https://4fd81aa6.ngrok.io/api/accounts/guides/?latitude=$lat&longitude=$lng",
         headers: {
           'Content-Type': 'application/json',
         }).then((http.Response response) {
@@ -235,7 +235,7 @@ class _GuideMap extends State<GuideMap> {
           polylineId: PolylineId(_myPlace.toString()),
           width: 10,
           points: convertToLatLng(decodePoly(encondedPoly)),
-          color: Color.fromRGBO(63, 169, 245, 1)));
+          color: Colors.redAccent));
     });
   }
 

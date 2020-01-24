@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ghumnaJam/authentication/authentication.dart';
-import 'package:ghumnaJam/login/GuideSignUp.dart';
-import 'package:ghumnaJam/login/TouristSignUp.dart';
-import 'package:ghumnaJam/login_bloc/login.dart';
-import 'package:ghumnaJam/user_repository.dart';
+import 'package:ghumnajaam/authentication/authentication.dart';
+import 'package:ghumnajaam/login/GuideSignUp.dart';
+import 'package:ghumnajaam/login/TouristSignUp.dart';
+import 'package:ghumnajaam/login_bloc/login.dart';
+import 'package:ghumnajaam/user_repository.dart';
 
 class SignUpScreen extends StatefulWidget {
   final UserRepository userRepository;
@@ -36,7 +36,7 @@ class _SignUpScreen extends State<SignUpScreen> {
     return new Container(
       height: MediaQuery.of(context).size.height,
       decoration: BoxDecoration(
-        color: Color.fromRGBO(63, 169, 245, 1),
+        color: Colors.redAccent,
         image: DecorationImage(
           colorFilter: new ColorFilter.mode(
               Colors.black.withOpacity(0.1), BlendMode.dstATop),
@@ -89,7 +89,7 @@ class _SignUpScreen extends State<SignUpScreen> {
                   child: new OutlineButton(
                     shape: new RoundedRectangleBorder(
                         borderRadius: new BorderRadius.circular(30.0)),
-                    color: Color.fromRGBO(63, 169, 245, 1),
+                    color: Colors.redAccent,
                     highlightedBorderColor: Colors.white,
                     onPressed: () => gotoTourist(),
                     child: new Container(
@@ -142,7 +142,7 @@ class _SignUpScreen extends State<SignUpScreen> {
                               "GUIDE",
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                  color: Color.fromRGBO(63, 169, 245, 1),
+                                  color: Colors.redAccent,
                                   fontWeight: FontWeight.bold),
                             ),
                           ),
@@ -205,7 +205,7 @@ class _SignUpScreen extends State<SignUpScreen> {
 
   @override
   void dispose() {
-    _loginBloc.dispose();
+    _loginBloc.close();
     super.dispose();
   }
 }

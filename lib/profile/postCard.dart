@@ -54,7 +54,7 @@ class TripModelCard extends StatelessWidget {
               String _headersKey = "Authorization";
               String _headersValue = "Token " + token;
               await http.get(
-                  "http://ec2-52-87-169-94.compute-1.amazonaws.com/api/trip/delete/?tripid=${post.id}",
+                  "https://4fd81aa6.ngrok.io/api/trip/delete/?tripid=${post.id}",
                   headers: {
                     _headersKey: _headersValue,
                     'Content-Type': 'application/json'

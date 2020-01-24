@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:ghumnajaam/trek_details/googleService.dart';
-// import 'package:ghumnajaam/tourist/placeDetail.dart';
+import 'package:ghumnajaam/tourist/placeDetail.dart';
 import 'package:ghumnajaam/trek_details/trek.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -72,7 +72,7 @@ class TrekDetailState extends State<TrekDetail> {
           polylineId: PolylineId(_myPlace.toString()),
           width: 10,
           points: convertToLatLng(decodePoly(encondedPoly)),
-          color: Color.fromRGBO(63, 169, 245, 1)));
+          color: Colors.redAccent));
     });
   }
 
@@ -224,17 +224,16 @@ class TrekDetailState extends State<TrekDetail> {
             children: <Widget>[
               Expanded(
                 child: InkWell(
-                  // onTap: () => Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //       builder: (context) =>
-                  //           PlaceDetailWidget(widget.trek.placeId)),
-                  // ),
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            PlaceDetailWidget(widget.trek.placeId)),
+                  ),
                   child: Container(
                     height: 40.0,
                     decoration: BoxDecoration(
-                      border:
-                          Border.all(color: Color.fromRGBO(63, 169, 245, 1)),
+                      border: Border.all(color: Colors.redAccent),
                     ),
                     child: Center(
                       child: Padding(
@@ -243,7 +242,7 @@ class TrekDetailState extends State<TrekDetail> {
                           "OTHER DETAIL",
                           style: TextStyle(
                               fontWeight: FontWeight.w600,
-                              color: Color.fromRGBO(63, 169, 245, 1)),
+                              color: Colors.redAccent),
                         ),
                       ),
                     ),
@@ -301,7 +300,7 @@ class TrekDetailState extends State<TrekDetail> {
   Widget build(BuildContext context) {
     return Scaffold(
         bottomNavigationBar: CurvedNavigationBar(
-          backgroundColor: Color.fromRGBO(63, 169, 245, 1),
+          backgroundColor: Colors.redAccent,
           height: 54.4,
           items: <Widget>[
             Icon(Icons.info, size: 30),

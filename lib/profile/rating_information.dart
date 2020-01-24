@@ -19,7 +19,7 @@ class RatingInformation extends StatelessWidget {
           rating.toStringAsFixed(1),
           style: textTheme.title.copyWith(
             fontWeight: FontWeight.w400,
-            color: Color.fromRGBO(63, 169, 245, 1),
+            color: Colors.redAccent,
           ),
         ),
         SizedBox(height: 4.0),

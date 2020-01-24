@@ -209,7 +209,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
               child: Center(
                 child: Icon(
                   Icons.map,
-                  color: Color.fromRGBO(63, 169, 245, 1),
+                  color: Colors.redAccent,
                   size: 50.0,
                 ),
               ),
@@ -227,7 +227,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                             "FIRST NAME",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -243,7 +243,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               width: 0.5,
                               style: BorderStyle.solid),
                         ),
@@ -262,7 +262,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                             "LAST NAME",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -278,7 +278,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               width: 0.5,
                               style: BorderStyle.solid),
                         ),
@@ -297,7 +297,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                             "EMAIL",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -313,7 +313,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               width: 0.5,
                               style: BorderStyle.solid),
                         ),
@@ -332,7 +332,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                             'USERNAME',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -348,7 +348,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               width: 0.5,
                               style: BorderStyle.solid),
                         ),
@@ -367,7 +367,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                             "PASSWORD",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -383,7 +383,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               width: 0.5,
                               style: BorderStyle.solid),
                         ),
@@ -402,7 +402,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                             "GUIDE PROFILE",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 20.0,
                             ),
                           ),
@@ -422,7 +422,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                             "PROFILE PIC",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -439,7 +439,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                     child: Center(
                       child: IconButton(
                         icon: Icon(Icons.camera_alt),
-                        color: Color.fromRGBO(63, 169, 245, 1),
+                        color: Colors.redAccent,
                         onPressed: () {
                           loadAssets();
                         },
@@ -466,7 +466,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                             "BIO",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -482,7 +482,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               width: 0.5,
                               style: BorderStyle.solid),
                         ),
@@ -501,7 +501,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                             "PHONE NUMBER",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -517,7 +517,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               width: 0.5,
                               style: BorderStyle.solid),
                         ),
@@ -536,7 +536,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                             "DAILY PRICE RATE",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -552,7 +552,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               width: 0.5,
                               style: BorderStyle.solid),
                         ),
@@ -571,7 +571,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                             "LOCATION",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(63, 169, 245, 1),
+                              color: Colors.redAccent,
                               fontSize: 15.0,
                             ),
                           ),
@@ -587,7 +587,7 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                     decoration: BoxDecoration(
                       border: Border(
                         bottom: BorderSide(
-                            color: Color.fromRGBO(63, 169, 245, 1),
+                            color: Colors.redAccent,
                             width: 0.5,
                             style: BorderStyle.solid),
                       ),
@@ -609,8 +609,8 @@ class _GuideSignUpPage extends State<GuideSignUpPage>
                               : null,
                           shape: new RoundedRectangleBorder(
                               borderRadius: new BorderRadius.circular(30.0)),
-                          splashColor: Color.fromRGBO(63, 169, 245, 1),
-                          color: Color.fromRGBO(63, 169, 245, 1),
+                          splashColor: Colors.redAccent,
+                          color: Colors.redAccent,
                           child: new Row(
                             children: <Widget>[
                               new Padding(

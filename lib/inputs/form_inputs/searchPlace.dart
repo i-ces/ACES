@@ -37,7 +37,7 @@ class _SearchLocationInputState extends State<SearchLocationInput> {
     final Uri uri = Uri.https(
       'maps.googleapis.com',
       '/maps/api/geocode/json',
-      {'address': '$address', 'key': 'AIzaSyCqOpyZcoDGRaOk10J46AVLfBHdWXVdn0g'},
+      {'address': '$address', 'key': 'AIzaSyBfecbv7_Q3gvbif7vhRs7VEmhwgkJxoWI'},
     );
     final http.Response response = await http.get(uri);
     final decodedResponse = json.decode(response.body);

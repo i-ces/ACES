@@ -58,7 +58,7 @@ class _GuideRequest extends State<GuideRequest> {
                               "Approve",
                               style: TextStyle(color: Colors.white),
                             ),
-                            color: Color.fromRGBO(63, 169, 245, 1),
+                            color: Colors.redAccent,
                             onPressed: () async {
                               final SharedPreferences prefs =
                                   await SharedPreferences.getInstance();
@@ -66,7 +66,7 @@ class _GuideRequest extends State<GuideRequest> {
                               String _headersKey = "Authorization";
                               String _headersValue = "Token " + token;
                               await http.get(
-                                  "http://ec2-52-87-169-94.compute-1.amazonaws.com/api/hire/approve/?hireid=${snaps.data[index].reqId}",
+                                  "https://4fd81aa6.ngrok.io/api/hire/approve/?hireid=${snaps.data[index].reqId}",
                                   headers: {
                                     _headersKey: _headersValue,
                                     'Content-Type': 'application/json'
@@ -78,7 +78,7 @@ class _GuideRequest extends State<GuideRequest> {
                               "Check Profile",
                               style: TextStyle(color: Colors.white),
                             ),
-                            color: Color.fromRGBO(63, 169, 245, 1),
+                            color: Colors.redAccent,
                             onPressed: () {
                               Navigator.push(
                                   context,
@@ -131,7 +131,7 @@ class _GuideRequest extends State<GuideRequest> {
                         style: TextStyle(fontWeight: FontWeight.bold)),
                     trailing: RaisedButton(
                       child: Text("Check Profile"),
-                      color: Color.fromRGBO(63, 169, 245, 1),
+                      color: Colors.redAccent,
                       onPressed: () {
                         Navigator.push(
                             context,
@@ -167,7 +167,7 @@ class _GuideRequest extends State<GuideRequest> {
             appBar: AppBar(
               elevation: 0.0,
               title: Text('My Requests', textAlign: TextAlign.center),
-              backgroundColor: Color.fromRGBO(63, 169, 245, 1),
+              backgroundColor: Colors.redAccent,
               bottom: TabBar(
                 tabs: [
                   Tab(
