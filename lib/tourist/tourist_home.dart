@@ -4,7 +4,6 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:ghumnajaam/account_bloc/account_repository.dart';
-import 'package:ghumnajaam/account_bloc/guides_bloc.dart';
 import 'package:ghumnajaam/account_bloc/index.dart';
 import 'package:ghumnajaam/error.dart';
 import 'package:ghumnajaam/tourist/placesSearch.dart';
@@ -27,7 +26,6 @@ class TouristHome extends StatefulWidget {
 // ignore: must_be_immutable
 class _TouristHome extends State<TouristHome> {
   AccountBlocBloc _accountBlocBloc;
-  GuidesBloc _guideBloc;
   TripBloc _tripBloc;
   Geolocator geolocator = Geolocator();
   Position userLocation;
@@ -46,9 +44,7 @@ class _TouristHome extends State<TouristHome> {
     _accountBlocBloc =
         AccountBlocBloc(accountRepository: widget.accountRepository);
     _tripBloc = TripBloc(TripRepository());
-    _guideBloc = GuidesBloc(accountRepository: widget.accountRepository);
     _accountBlocBloc.add(LoadAccountBlocEvent());
-    _guideBloc.add(LoadGuidesBlocEvent());
   }
 
   @override
@@ -88,8 +84,8 @@ class _TouristHome extends State<TouristHome> {
                     size: 30,
                     color: Colors.redAccent,
                   ),
-                  Icon(Icons.train, size: 30, color: Colors.lightBlue),
-                  Icon(Icons.map, size: 30, color: Colors.lightBlue),
+                  Icon(Icons.train, size: 30, color: Colors.redAccent),
+                  Icon(Icons.map, size: 30, color: Colors.redAccent),
                 ],
                 animationCurve: Curves.easeInOutQuad,
                 animationDuration: Duration(milliseconds: 400),

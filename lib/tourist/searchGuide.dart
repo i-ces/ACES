@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:ghumnajaam/account_bloc/account_model.dart';
 import 'package:ghumnajaam/account_bloc/account_repository.dart';
-import 'package:ghumnajaam/account_bloc/guides_bloc.dart';
 import 'package:ghumnajaam/account_bloc/index.dart';
 import 'package:ghumnajaam/profile/other_profile.dart';
 
@@ -55,9 +54,9 @@ class GuidesSearch extends StatelessWidget {
                       borderRadius: BorderRadius.all(Radius.circular(60))),
                   child: Icon(
                     Icons.play_arrow,
-                    color: Colors.lightBlue,
+                    color: Colors.redAccent,
                   ),
-                  color: Colors.lightBlueAccent,
+                  color: Colors.redAccent,
                 ),
               ),
               onTap: () {
@@ -83,20 +82,17 @@ class GuidesSearch extends StatelessWidget {
             child: Center(
           child: CircularProgressIndicator(),
         ));
-      }
-      if (currentState is LoadingGuidesBlocState) {
+      } else if (currentState is LoadingGuidesBlocState) {
         return SafeArea(
             child: Center(
           child: RefreshProgressIndicator(),
         ));
-      }
-      if (currentState is ErrorGuidesBlocState) {
+      } else if (currentState is ErrorGuidesBlocState) {
         return new Container(
             child: new Center(
           child: new Text(currentState.errorMessage ?? 'Error'),
         ));
-      }
-      if (currentState is LoadedGuidesListState) {
+      } else if (currentState is LoadedGuidesListState) {
         final List<AccountModel> guides = currentState.guidesList;
         print(guides[0]);
         return guideView(guides);

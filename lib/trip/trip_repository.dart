@@ -14,7 +14,7 @@ class TripRepository {
       {String imagePath}) async {
     final mimeTypeData = lookupMimeType(image.path).split('/');
     final imageUploadRequest = http.MultipartRequest(
-        'POST', Uri.parse('https://b5d3b73b.ngrok.io/api/trip/image/'));
+        'POST', Uri.parse('https://4fd81aa6.ngrok.io/api/trip/image/'));
     final file = await http.MultipartFile.fromPath(
       'image',
       image.path,
@@ -62,7 +62,7 @@ class TripRepository {
       'placeId': placeId,
       'rating': rating,
       'description': description,
-      'image': "https://b5d3b73b.ngrok.io" + uploadData['image']
+      'image': "https://4fd81aa6.ngrok.io/" + uploadData['image']
     };
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     final String token = prefs.getString('token');
@@ -70,7 +70,7 @@ class TripRepository {
     String _headersValue = "Token " + token;
     var encodedData = json.encode(authData);
     print(authData);
-    await http.post("https://b5d3b73b.ngrok.io/api/trip/create/",
+    await http.post("https://4fd81aa6.ngrok.io/api/trip/create/",
         body: encodedData,
         headers: {
           _headersKey: _headersValue,
@@ -89,7 +89,7 @@ class TripRepository {
     String _headersKey = "Authorization";
     String _headersValue = "Token " + token;
 
-    await http.get("https://b5d3b73b.ngrok.io/api/trip/view/", headers: {
+    await http.get("https://4fd81aa6.ngrok.io/api/trip/view/", headers: {
       _headersKey: _headersValue,
       'Content-Type': 'application/json'
     }).then((http.Response response) {
@@ -119,7 +119,7 @@ class TripRepository {
     String _headersKey = "Authorization";
     String _headersValue = "Token " + token;
 
-    await http.get("https://b5d3b73b.ngrok.io/api/accounts/review/?guideid=$id",
+    await http.get("https://4fd81aa6.ngrok.io/api/accounts/review/?guideid=$id",
         headers: {
           _headersKey: _headersValue,
           'Content-Type': 'application/json'
@@ -143,7 +143,7 @@ class TripRepository {
   Future<List<TripModel>> fetchOtherTrips(int id) async {
     List<TripModel> trips = [];
 
-    await http.get("https://b5d3b73b.ngrok.io/api/trip/userfeeds/?userid=$id",
+    await http.get("https://4fd81aa6.ngrok.io/api/trip/userfeeds/?userid=$id",
         headers: {
           'Content-Type': 'application/json'
         }).then((http.Response response) {
@@ -169,7 +169,7 @@ class TripRepository {
 
     await http
         .get(
-      "https://b5d3b73b.ngrok.io/api/trip/placefeeds/?placeid=$placeId",
+      "https://4fd81aa6.ngrok.io/api/trip/placefeeds/?placeid=$placeId",
     )
         .then((http.Response response) {
       print(response.body);
@@ -197,7 +197,7 @@ class TripRepository {
     String _headersKey = "Authorization";
     String _headersValue = "Token " + token;
 
-    await http.get("https://b5d3b73b.ngrok.io/api/hire/pending/", headers: {
+    await http.get("https://4fd81aa6.ngrok.io/api/hire/pending/", headers: {
       _headersKey: _headersValue,
       'Content-Type': 'application/json'
     }).then((http.Response response) {
@@ -248,7 +248,7 @@ class TripRepository {
     String _headersKey = "Authorization";
     String _headersValue = "Token " + token;
     final bool flag = prefs.getBool('flag');
-    await http.get("https://b5d3b73b.ngrok.io/api/hire/approved/", headers: {
+    await http.get("https://4fd81aa6.ngrok.io/api/hire/approved/", headers: {
       _headersKey: _headersValue,
       'Content-Type': 'application/json'
     }).then((http.Response response) {

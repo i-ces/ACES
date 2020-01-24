@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:ghumnajaam/account_bloc/account_repository.dart';
-import 'package:ghumnajaam/account_bloc/guides_bloc.dart';
 import 'package:ghumnajaam/account_bloc/index.dart';
 import 'package:ghumnajaam/tourist/nearbyGuide.dart';
 import 'package:ghumnajaam/tourist/searchGuide.dart';
@@ -17,7 +16,7 @@ class PlacesSearch extends StatefulWidget {
 }
 
 class _PlacesSearch extends State<PlacesSearch> {
-  GuidesBloc _guidesBloc;
+  AccountBlocBloc _guidesBloc;
   Position userLocation;
   Geolocator geolocator = Geolocator();
   @override
@@ -29,7 +28,7 @@ class _PlacesSearch extends State<PlacesSearch> {
       });
       print(position.accuracy);
     });
-    _guidesBloc = GuidesBloc(accountRepository: widget.accountRepository);
+    _guidesBloc = AccountBlocBloc(accountRepository: widget.accountRepository);
     _guidesBloc.add(LoadGuidesBlocEvent());
   }
 
@@ -97,7 +96,7 @@ class _PlacesSearch extends State<PlacesSearch> {
                 ),
                 Expanded(
                   child: Container(
-                    color: Colors.lightBlue,
+                    color: Colors.redAccent,
                     width: MediaQuery.of(context).size.width,
                   ),
                 ),

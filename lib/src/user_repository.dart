@@ -169,7 +169,7 @@ class UserRepository {
         'latitude': lattitude,
         'longitude': longitude,
         'profile_pic':
-            "https://4fd81aa6.ngrok.io" + uploadedData['profile_pic'],
+            "https://4fd81aa6.ngrok.io/" + uploadedData['profile_pic'],
         'bio': bio,
         "rating": 0.0,
         "pricing": price,
