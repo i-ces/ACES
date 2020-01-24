@@ -75,28 +75,35 @@ class GuidesSearch extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<AccountBlocBloc, AccountBlocState>(builder: (
       BuildContext context,
-      currentState,
+      AccountBlocState currentState,
     ) {
       if (currentState is LoadGuidesBlocState) {
         return SafeArea(
             child: Center(
           child: CircularProgressIndicator(),
         ));
-      } else if (currentState is LoadingGuidesBlocState) {
+      }
+      if (currentState is LoadingGuidesBlocState) {
         return SafeArea(
             child: Center(
           child: RefreshProgressIndicator(),
         ));
-      } else if (currentState is ErrorGuidesBlocState) {
+      }
+      if (currentState is ErrorGuidesBlocState) {
         return new Container(
             child: new Center(
           child: new Text(currentState.errorMessage ?? 'Error'),
         ));
-      } else if (currentState is LoadedGuidesListState) {
+      }
+      if (currentState is LoadedGuidesListState) {
         final List<AccountModel> guides = currentState.guidesList;
         print(guides[0]);
         return guideView(guides);
       }
+      return SafeArea(
+          child: Center(
+        child: RefreshProgressIndicator(),
+      ));
     });
   }
 }

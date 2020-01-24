@@ -33,6 +33,8 @@ class OtherProfilePage extends StatefulWidget {
 class _OtherProfilePage extends State<OtherProfilePage> {
   bool flag;
   double _userRating = 0.0;
+  int dateDiff;
+  DateTime initialDate;
 
   bool isLoading = false;
   TextEditingController _descriptionController = TextEditingController();
@@ -125,13 +127,23 @@ class _OtherProfilePage extends State<OtherProfilePage> {
         hasFloatingPlaceholder: false,
       ),
       onSaved: (dt) {
-        _fromController.text =
-            "${dt.year.toString()}-${dt.month.toString()}-${dt.day.toString()}";
+        setState(() {
+          initialDate = dt;
+          _fromController.text =
+              "${dt.year.toString()}-${dt.month.toString()}-${dt.day.toString()}";
+        });
       },
       validator: (DateTime value) {
         if (value.toString().isEmpty) {
           return 'Please enter a valid date';
         }
+      },
+      onShowPicker: (BuildContext context, DateTime currentValue) {
+        return showDatePicker(
+            context: context,
+            firstDate: DateTime(1900),
+            initialDate: currentValue ?? DateTime.now(),
+            lastDate: DateTime(2100));
       },
     );
   }
@@ -148,8 +160,21 @@ class _OtherProfilePage extends State<OtherProfilePage> {
           return 'Please enter a valid date';
         }
       },
-      onSaved: (dt) => setState(() => _toController.text =
-          "${dt.year.toString()}-${dt.month.toString()}-${dt.day.toString()}"),
+      onSaved: (dt) {
+        setState(() {
+          _toController.text =
+              "${dt.year.toString()}-${dt.month.toString()}-${dt.day.toString()}";
+          dateDiff = dt.difference(initialDate).inDays;
+          print(dateDiff);
+        });
+      },
+      onShowPicker: (BuildContext context, DateTime currentValue) {
+        return showDatePicker(
+            context: context,
+            firstDate: DateTime(1900),
+            initialDate: currentValue ?? DateTime.now(),
+            lastDate: DateTime(2100));
+      },
     );
   }
 
@@ -407,10 +432,11 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                             String _headersValue = "Token " + token;
                             print(_headersValue);
                             final Map<String, dynamic> authData = {
-                              "guide": widget.model.id,
+                              "guide": widget.model.reqId,
                               "hiringdetail": ''' ${_descriptionController.text}
                                                  From:${_fromController.text}
-                                                 To:${_toController.text} '''
+                                                 To:${_toController.text} ''',
+                              "days": dateDiff
                             };
                             print(widget.model.id);
                             http.Response response = await http.post(

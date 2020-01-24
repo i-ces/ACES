@@ -28,10 +28,12 @@ class AccountBlocBloc extends Bloc<AccountBlocEvent, AccountBlocState> {
       }
     }
     if (event is LoadGuidesBlocEvent) {
-      print("hello");
+      print("object is called");
       try {
         final List<AccountModel> guides = await accountRepository.fetchGuides();
+        print("object is called");
         yield LoadedGuidesListState(guidesList: guides);
+        print("object is called");
       } catch (e) {
         throw e.toString();
       }

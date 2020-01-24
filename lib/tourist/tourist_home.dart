@@ -124,7 +124,9 @@ class _TouristHome extends State<TouristHome> {
                     children: <Widget>[
                       UserDetailsPage(),
                       TripScreen(tripBloc: _tripBloc),
-                      PlacesSearch()
+                      PlacesSearch(
+                        accountRepository: AccountRepository(),
+                      )
                     ],
                   )),
             ),

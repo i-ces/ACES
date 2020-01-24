@@ -3,28 +3,51 @@ import 'package:ghumnajaam/account_bloc/account_model.dart';
 import 'package:meta/meta.dart';
 
 @immutable
-abstract class AccountBlocState {}
+abstract class AccountBlocState extends Equatable {}
 
 /// UnInitialized
-class LoadAccountBlocState extends AccountBlocState {}
+class LoadAccountBlocState extends AccountBlocState {
+  @override
+  // TODO: implement props
+  List<Object> get props => null;
+}
 
-class LoadGuidesBlocState extends AccountBlocState {}
+class LoadGuidesBlocState extends AccountBlocState {
+  @override
+  // TODO: implement props
+  List<Object> get props => null;
+}
 
-class LoadingAccountBlocState extends AccountBlocState {}
+class LoadingAccountBlocState extends AccountBlocState {
+  @override
+  // TODO: implement props
+  List<Object> get props => null;
+}
 
-class LoadingGuidesBlocState extends AccountBlocState {}
+class LoadingGuidesBlocState extends AccountBlocState {
+  @override
+  // TODO: implement props
+  List<Object> get props => null;
+}
 
 /// Initialized
 class InAccountBlocState extends AccountBlocState {
   final AccountModel accountModel;
   InAccountBlocState({@required this.accountModel})
       : assert(accountModel != null);
+
+  @override
+  // TODO: implement props
+  List<Object> get props => null;
 }
 
 class LoadedGuidesListState extends AccountBlocState {
   final List<AccountModel> guidesList;
-  LoadedGuidesListState({@required this.guidesList})
-      : assert(guidesList != null);
+  LoadedGuidesListState({@required this.guidesList});
+
+  @override
+  // TODO: implement props
+  List<Object> get props => null;
 }
 
 class ErrorAccountBlocState extends AccountBlocState {
@@ -34,6 +57,10 @@ class ErrorAccountBlocState extends AccountBlocState {
 
   @override
   String toString() => 'ErrorAccountBlocState';
+
+  @override
+  // TODO: implement props
+  List<Object> get props => null;
 }
 
 class ErrorGuidesBlocState extends AccountBlocState {
@@ -43,4 +70,8 @@ class ErrorGuidesBlocState extends AccountBlocState {
 
   @override
   String toString() => 'ErrorAccountBlocState';
+
+  @override
+  // TODO: implement props
+  List<Object> get props => null;
 }

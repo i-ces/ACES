@@ -5,7 +5,7 @@ import 'package:google_maps_webservice/places.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-const kGoogleApiKey = "AIzaSyBfecbv7_Q3gvbif7vhRs7VEmhwgkJxoWI";
+const kGoogleApiKey = "jdsbvjkdbvkjbdvjkbvjkbcvjkbsKJdbvkjbvjb";
 GoogleMapsPlaces _places = GoogleMapsPlaces(apiKey: kGoogleApiKey);
 
 class GuideListWidget extends StatefulWidget {
