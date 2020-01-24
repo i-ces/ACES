@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ghumnaJam/profile/postCard.dart';
-import 'package:ghumnaJam/trip/index.dart';
 
 class TripPage extends StatefulWidget {
   @override
@@ -10,23 +8,16 @@ class TripPage extends StatefulWidget {
 }
 
 class _TripPage extends State<TripPage> {
-  List<bool> isThreeLines = [];
-  TripRepository model = TripRepository();
+  
   @override
-  initState() {
-    model.fetchTrips();
-    super.initState();
-  }
+  
 
-  Widget _eventView(BuildContext context, TripRepository model) {
+  Widget _eventView(BuildContext context) {
     return FutureBuilder(
-      future: model.fetchTrips(),
       builder: (BuildContext context, AsyncSnapshot snaps) {
         //  print(model.notices);
 
-        return snaps.hasData
-            ? TripModelCard(snaps.data)
-            : Center(child: RefreshProgressIndicator());
+        return Center(child: RefreshProgressIndicator());
       },
     );
   }
@@ -42,6 +33,6 @@ class _TripPage extends State<TripPage> {
         body: Container(
             height: MediaQuery.of(context).size.height,
             color: Color.fromRGBO(63, 169, 245, 1),
-            child: _eventView(context, TripRepository())));
+            child: _eventView(context)));
   }
 }

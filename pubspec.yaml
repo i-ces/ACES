@@ -26,6 +26,11 @@ dependencies:
   flutter_rating_bar:
   http:
   shared_preferences:
+  curved_navigation_bar:
+  connectivity:
+  flutter_bloc:
+  bloc:
+  geolocator:
   
 
 dev_dependencies:

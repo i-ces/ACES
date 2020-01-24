@@ -46,7 +46,7 @@ class _HomepageState extends State<Homepage> {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => LoginScreen()));
                 },
-                child: Text(""),
+                child: Text("profile page"),
               ),
             ],
           ),
