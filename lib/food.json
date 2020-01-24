@@ -1,0 +1,111 @@
+[
+    {
+        "name":"milk 1 ltr",
+        "price":"Rs: 80",
+        "image":"assets/food/milk.jpg"
+    },
+    {
+        "name":"Bread",
+        "price":"Rs: 55",
+        "image":"assets/food/bread.jpg"
+    },
+    {
+        "name":"Eggs (30)",
+        "price":"Rs: 350",
+        "image":"assets/food/eggs.jpg"
+    },
+    {
+        "name":"cheese 1 kg",
+        "price":"Rs: 800",
+        "image":"assets/food/cheese.jpg"
+    },
+    {
+        "name":"water 1 ltr",
+        "price":"Rs: 30",
+        "image":"assets/food/water.jpg"
+    },
+    {
+        "name":"wine",
+        "price":"Rs: 750",
+        "image":"assets/food/wine.jpg"
+    },
+    {
+        "name":"Domestic Beer",
+        "price":"Rs: 230",
+        "image":"assets/food/domesticbeer.jpg"
+    },
+    {
+        "name":"Imported Beer",
+        "price":"Rs: 315",
+        "image":"assets/food/importedbeer.jpg"
+    },
+    {
+        "name":"Cigarettes (Marlboro)",
+        "price":"Rs: 225",
+        "image":"assets/food/cigarettes.png"
+    },
+    {
+        "name":"Chicken Breasts (1 kg)",
+        "price":"Rs: 430",
+        "image":"assets/food/chicken.jpg"
+    },
+    {
+        "name":"Meal",
+        "price":"Rs: 275",
+        "image":"assets/food/meal.jpg"
+    },
+    {
+        "name":"Cappuccino",
+        "price":"Rs: 170",
+        "image":"assets/food/cappuccino.jpg"
+    },
+    {
+        "name":"Espresso Coffee",
+        "price":"Rs: 120",
+        "image":"assets/food/coffee.jpg"
+    },
+    {
+        "name":"CheeseBurger",
+        "price":"Rs: 310",
+        "image":"assets/food/cheeseburger.jpg"
+    },{
+        "name":"Veg Burger",
+        "price":"Rs: 265",
+        "image":"assets/food/vegburger.jpg"
+    },
+    {
+        "name":"Cheese Tomato Pizza",
+        "price":"Rs: 385",
+        "image":"assets/food/cheesepizza.jpg"
+    },
+    {
+        "name":"chicken pizza",
+        "price":"Rs: 450",
+        "image":"assets/food/chickenpizza.jpg"
+    },
+    {
+        "name":"Mixed Pizza",
+        "price":"Rs: 650",
+        "image":"assets/food/mixedpizza.jpg"
+    },
+    {
+        "name":"Chicken Spring Roll",
+        "price":"Rs: 310",
+        "image":"assets/food/chickenspringroll.jpg"
+    },
+    {
+        "name":"Veg Spring Roll",
+        "price":"Rs: 250",
+        "image":"assets/food/vegspringroll.jpg"
+    },
+    {
+        "name":"Veg Nepali Food",
+        "price":"Rs: 250",
+        "image":"assets/food/vegnepaliset.jpg"
+    },
+    {
+        "name":"Chicken Nepali Food",
+        "price":"Rs: 350",
+        "image":"assets/food/chickennepaliset.jpg"
+    }
+]

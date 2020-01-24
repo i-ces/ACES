@@ -5,7 +5,6 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:geolocator/geolocator.dart';
 
 class GuideTrip extends StatefulWidget {
-  
   GuideTrip({
     Key key,
   }) : super(key: key);
@@ -25,7 +24,6 @@ class _GuideTrip extends State<GuideTrip> {
   final _locationController = TextEditingController();
 
   double _userRating = 0.0;
-  
 
   @override
   void initState() {
@@ -224,20 +222,17 @@ class _GuideTrip extends State<GuideTrip> {
                     child: new Row(children: <Widget>[
                       new Expanded(
                         child: FlatButton(
-                          onPressed:() {
-                                  showDialog(
-                                      context: context,
-                                      builder: (_) => AlertDialog(
-                                            title: Text("View your trips"),
-                                            actions: <Widget>[
-                                              FlatButton(
-                                                child: Text("Go"),
-                                                onPressed: () {}
-                                              )
-                                            ],
-                                          ));
-                                },
-                              
+                          onPressed: () {
+                            showDialog(
+                                context: context,
+                                builder: (_) => AlertDialog(
+                                      title: Text("View your trips"),
+                                      actions: <Widget>[
+                                        FlatButton(
+                                            child: Text("Go"), onPressed: () {})
+                                      ],
+                                    ));
+                          },
                           shape: new RoundedRectangleBorder(
                               borderRadius: new BorderRadius.circular(30.0)),
                           splashColor: Color.fromRGBO(63, 169, 245, 1),
@@ -264,43 +259,37 @@ class _GuideTrip extends State<GuideTrip> {
     }
 
     return Scaffold(
-        appBar: AppBar(
-          title: Text("My Trip"),
-          elevation: 0.0,
-          backgroundColor: Color.fromRGBO(63, 169, 245, 1),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.map),
-              onPressed: () {}
+      appBar: AppBar(
+        title: Text("My Trip"),
+        elevation: 0.0,
+        backgroundColor: Color.fromRGBO(63, 169, 245, 1),
+        actions: <Widget>[IconButton(icon: Icon(Icons.map), onPressed: () {})],
+      ),
+      body: Container(
+        height: MediaQuery.of(context).size.height,
+        color: Color.fromRGBO(63, 169, 245, 1),
+        child: ListView(
+          shrinkWrap: true,
+          scrollDirection: Axis.vertical,
+          physics: AlwaysScrollableScrollPhysics(),
+          padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+          children: <Widget>[
+            Center(
+              child: Text("Add place to my trip"),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height * 0.5,
+              child: Card(
+                child: tripCreate(),
+              ),
             )
           ],
         ),
-        body: Container(
-                height: MediaQuery.of(context).size.height,
-                color: Color.fromRGBO(63, 169, 245, 1),
-                child: ListView(
-                  shrinkWrap: true,
-                  scrollDirection: Axis.vertical,
-                  physics: AlwaysScrollableScrollPhysics(),
-                  padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  children: <Widget>[
-                    Center(
-                      child: Text("Add place to my trip"),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Container(
-                      height: MediaQuery.of(context).size.height * 0.5,
-                      child: Card(
-                        child: tripCreate(),
-                      ),
-                    )
-                  ],
-                ),
-              ),
+      ),
     );
-            
   }
 }
 
