@@ -106,12 +106,12 @@ class SearchGuideListState extends State<SearchGuideListWidget> {
                         subtitle: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: <Widget>[
-                            RatingBarIndicator(
+                            FlutterRatingBarIndicator(
                               rating: snaps.data[index].rating,
                               itemCount: 5,
                               itemSize: 18.0,
                               physics: NeverScrollableScrollPhysics(),
-                              unratedColor: Colors.amber.withAlpha(50),
+                              emptyColor: Colors.amber.withAlpha(50),
                             ),
                           ],
                         ),

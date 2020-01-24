@@ -618,6 +618,7 @@ class _TouristSignUpPage extends State<TouristSignUpPage>
       return;
     }
     _formKey.currentState.save();
+    print(images.path);
     _loginBloc.add(TouristSignUpButtonPressed(
         firstName: _firstnameController.text,
         lastName: _lastnameController.text,

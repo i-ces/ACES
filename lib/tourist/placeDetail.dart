@@ -249,12 +249,12 @@ class PlaceDetailState extends State<PlaceDetailWidget> {
                   "Rating: ${placeDetail.rating}",
                   style: Theme.of(context).textTheme.caption,
                 ),
-                RatingBarIndicator(
+                FlutterRatingBarIndicator(
                   rating: (placeDetail.rating + 0.0).toDouble(),
                   itemCount: 5,
                   itemSize: 18.0,
                   physics: NeverScrollableScrollPhysics(),
-                  unratedColor: Colors.amber.withAlpha(50),
+                  emptyColor: Colors.amber.withAlpha(50),
                 ),
               ],
             )),

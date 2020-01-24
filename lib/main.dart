@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ghumnajaam/account_bloc/account_repository.dart';
 import 'package:ghumnajaam/authentication/authentication.dart';
 import 'package:ghumnajaam/error.dart';
+import 'package:ghumnajaam/guide/guide_home.dart';
 import 'package:ghumnajaam/login/first.dart';
 import 'package:ghumnajaam/login_bloc/login.dart';
 import 'package:ghumnajaam/tourist/tourist_home.dart';
@@ -75,11 +76,7 @@ class _AppState extends State<App> {
                     return FirstScreen(userRepository: _userRepository);
                   }
                   if (state is AuthenticationAuthenticated) {
-                    return Container(
-                      child: Center(
-                        child: Text("Guide"),
-                      ),
-                    );
+                    return GuideHome(accountRepository: AccountRepository());
                   }
                   if (state is TouristAuthenticationAuthenticated) {
                     //  return TouristHome();

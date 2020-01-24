@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -9,63 +8,37 @@ import 'package:ghumnajaam/inputs/location_data.dart';
 import 'package:ghumnajaam/profile/feeds.dart';
 import 'package:ghumnajaam/tourist/nearbyPlaces.dart';
 import 'package:ghumnajaam/trip/index.dart';
-import 'package:flutter/services.dart';
-import 'package:image_picker/image_picker.dart';
 
-class MyTrip extends StatefulWidget {
+class GuideTrip extends StatefulWidget {
   final TripBloc tripBloc;
-  MyTrip({
+  GuideTrip({
     Key key,
     @required this.tripBloc,
   }) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    return _MyTrip();
+    return _GuideTrip();
   }
 }
 
-class _MyTrip extends State<MyTrip> {
+class _GuideTrip extends State<GuideTrip> {
   Geolocator geolocator = Geolocator();
   Position userLocation;
   final _ratingController = TextEditingController();
   final _daysController = TextEditingController();
   final _placeIdController = TextEditingController();
   final _locationController = TextEditingController();
-  final _descriptionController = TextEditingController();
 
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  File images;
-  String _error;
   double _userRating = 0.0;
   TripBloc get _tripBloc => widget.tripBloc;
-  Future<void> loadAssets() async {
-    setState(() {
-      images = null;
-    });
-
-    File resultList;
-    String error;
-
-    try {
-      resultList = await ImagePicker.pickImage(source: ImageSource.gallery);
-    } on PlatformException catch (e) {
-      error = e.message;
-    }
-
-    if (!mounted) return;
-
-    setState(() {
-      images = resultList;
-      if (error == null) _error = 'No Error Dectected';
-    });
-  }
 
   @override
   void initState() {
     super.initState();
     _getLocation().then((position) {
       userLocation = position;
+      print(userLocation.latitude);
     });
   }
 
@@ -77,6 +50,7 @@ class _MyTrip extends State<MyTrip> {
     } catch (e) {
       currentLocation = null;
     }
+    print(currentLocation);
     return currentLocation;
   }
 
@@ -97,37 +71,29 @@ class _MyTrip extends State<MyTrip> {
     );
   }
 
-  Widget _descriptionField() {
+  Widget _rating() {
     return TextFormField(
-      controller: _descriptionController,
-      keyboardType: TextInputType.text,
+      controller: _ratingController,
+      keyboardType: TextInputType.number,
       decoration: InputDecoration(
         border: InputBorder.none,
-        hintText: 'Details of trip',
+        hintText: 'Enter place rating and press rate',
         hintStyle: TextStyle(color: Colors.grey),
+        suffixIcon: MaterialButton(
+          onPressed: () {
+            setState(() {
+              _userRating = double.parse(_ratingController.text ?? "0.0");
+            });
+          },
+          child: Text("Rate"),
+        ),
       ),
       validator: (String value) {
-        if (value.isEmpty || value.length <= 10) {
-          return 'Please enter a valid detail';
+        if (value.isEmpty ||
+            double.parse(value ?? "0.0") > 5 ||
+            double.parse(value ?? "0.0") < 0) {
+          return 'Please enter a valid rating';
         }
-      },
-    );
-  }
-
-  Widget _rating() {
-    return FlutterRatingBar(
-      initialRating: 0.0,
-      allowHalfRating: true,
-      ignoreGestures: false,
-      tapOnlyMode: false,
-      itemCount: 5,
-      itemSize: 30.0,
-      itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-      onRatingUpdate: (rating) {
-        print(rating);
-        setState(() {
-          _userRating = rating;
-        });
       },
     );
   }
@@ -144,13 +110,12 @@ class _MyTrip extends State<MyTrip> {
               child: Center(
                 child: Icon(
                   Icons.map,
-                  color: Colors.redAccent,
+                  color: Color.fromRGBO(63, 169, 245, 1),
                   size: 50.0,
                 ),
               ),
             ),
             Form(
-              key: _formKey,
               child: new Column(
                 children: <Widget>[
                   new Row(
@@ -162,7 +127,7 @@ class _MyTrip extends State<MyTrip> {
                             "LOCATION",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Colors.redAccent,
+                              color: Color.fromRGBO(63, 169, 245, 1),
                               fontSize: 15.0,
                             ),
                           ),
@@ -178,7 +143,7 @@ class _MyTrip extends State<MyTrip> {
                     decoration: BoxDecoration(
                       border: Border(
                         bottom: BorderSide(
-                            color: Colors.redAccent,
+                            color: Color.fromRGBO(63, 169, 245, 1),
                             width: 0.5,
                             style: BorderStyle.solid),
                       ),
@@ -200,7 +165,7 @@ class _MyTrip extends State<MyTrip> {
                             "No of days of Trip",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Colors.redAccent,
+                              color: Color.fromRGBO(63, 169, 245, 1),
                               fontSize: 15.0,
                             ),
                           ),
@@ -216,7 +181,7 @@ class _MyTrip extends State<MyTrip> {
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                              color: Colors.redAccent,
+                              color: Color.fromRGBO(63, 169, 245, 1),
                               width: 0.5,
                               style: BorderStyle.solid),
                         ),
@@ -232,54 +197,10 @@ class _MyTrip extends State<MyTrip> {
                         child: new Padding(
                           padding: const EdgeInsets.only(left: 40.0),
                           child: new Text(
-                            "IMAGES OF THE PLACE",
+                            "RATE THE PLACE",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Colors.redAccent,
-                              fontSize: 15.0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  new Container(
-                    width: MediaQuery.of(context).size.width,
-                    margin: const EdgeInsets.only(
-                        left: 40.0, right: 40.0, top: 10.0),
-                    alignment: Alignment.center,
-                    padding: const EdgeInsets.only(left: 0.0, right: 10.0),
-                    child: Center(
-                      child: IconButton(
-                        icon: Icon(Icons.camera_alt),
-                        color: Colors.redAccent,
-                        onPressed: () {
-                          loadAssets();
-                        },
-                      ),
-                    ),
-                  ),
-                  Center(
-                    child: images == null
-                        ? Text('No image selected.')
-                        : Image.file(
-                            images,
-                            height: 200,
-                          ),
-                  ),
-                  SizedBox(
-                    height: 24.0,
-                  ),
-                  new Row(
-                    children: <Widget>[
-                      new Expanded(
-                        child: new Padding(
-                          padding: const EdgeInsets.only(left: 40.0),
-                          child: new Text(
-                            "Description",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.redAccent,
+                              color: Color.fromRGBO(63, 169, 245, 1),
                               fontSize: 15.0,
                             ),
                           ),
@@ -295,45 +216,22 @@ class _MyTrip extends State<MyTrip> {
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                              color: Colors.redAccent,
+                              color: Color.fromRGBO(63, 169, 245, 1),
                               width: 0.5,
                               style: BorderStyle.solid),
                         ),
                       ),
                       padding: const EdgeInsets.only(left: 0.0, right: 10.0),
-                      child: _descriptionField()),
-                  SizedBox(
-                    height: 24,
-                  ),
-                  new Row(
-                    children: <Widget>[
-                      new Expanded(
-                        child: new Padding(
-                          padding: const EdgeInsets.only(left: 40.0),
-                          child: new Text(
-                            "RATE THE PLACE",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.redAccent,
-                              fontSize: 15.0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 24.0,
-                  ),
-                  new Container(
-                      width: MediaQuery.of(context).size.width,
-                      margin: const EdgeInsets.only(
-                          left: 40.0, right: 40.0, top: 10.0),
-                      alignment: Alignment.center,
-                      padding: const EdgeInsets.only(left: 0.0, right: 10.0),
                       child: _rating()),
                   SizedBox(
                     height: 24.0,
+                  ),
+                  FlutterRatingBarIndicator(
+                    rating: _userRating,
+                    pathClipper: DiamondClipper(),
+                    itemCount: 5,
+                    itemSize: 50.0,
+                    emptyColor: Colors.amber.withAlpha(50),
                   ),
                   Container(
                     margin: const EdgeInsets.only(top: 20.0),
@@ -343,7 +241,7 @@ class _MyTrip extends State<MyTrip> {
                         child: FlatButton(
                           onPressed: state is! TripLoading
                               ? () {
-                                  _onSignUpButtonPressed();
+                                  _onSignUpButtonPressed;
                                   showDialog(
                                       context: context,
                                       builder: (_) => AlertDialog(
@@ -363,8 +261,8 @@ class _MyTrip extends State<MyTrip> {
                               : null,
                           shape: new RoundedRectangleBorder(
                               borderRadius: new BorderRadius.circular(30.0)),
-                          splashColor: Colors.redAccent,
-                          color: Colors.redAccent,
+                          splashColor: Color.fromRGBO(63, 169, 245, 1),
+                          color: Color.fromRGBO(63, 169, 245, 1),
                           child: new Row(
                             children: <Widget>[
                               new Padding(
@@ -390,7 +288,7 @@ class _MyTrip extends State<MyTrip> {
         appBar: AppBar(
           title: Text("My Trip"),
           elevation: 0.0,
-          backgroundColor: Colors.redAccent,
+          backgroundColor: Color.fromRGBO(63, 169, 245, 1),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.map),
@@ -432,7 +330,7 @@ class _MyTrip extends State<MyTrip> {
               }
               return Container(
                 height: MediaQuery.of(context).size.height,
-                color: Colors.redAccent,
+                color: Color.fromRGBO(63, 169, 245, 1),
                 child: ListView(
                   shrinkWrap: true,
                   scrollDirection: Axis.vertical,
@@ -440,19 +338,13 @@ class _MyTrip extends State<MyTrip> {
                   padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                   children: <Widget>[
                     Center(
-                      child: Text(
-                        "Add place to my trip",
-                        style: TextStyle(
-                            fontSize: 30,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.white),
-                      ),
+                      child: Text("Add place to my trip"),
                     ),
                     SizedBox(
                       height: 20,
                     ),
                     Container(
-                      height: MediaQuery.of(context).size.height * 0.7,
+                      height: MediaQuery.of(context).size.height * 0.5,
                       child: Card(
                         child: tripCreate(state),
                       ),
@@ -475,17 +367,13 @@ class _MyTrip extends State<MyTrip> {
   }
 
   _onSignUpButtonPressed() {
-    if (!_formKey.currentState.validate()) {
-      return;
-    }
-    _formKey.currentState.save();
+    print(_locationController.text);
     _tripBloc.add(AddTripButtonPressed(
-        days: int.parse(_daysController.text),
-        address: _locationController.text,
-        placeId: _placeIdController.text,
-        rating: _userRating,
-        images: images,
-        description: _descriptionController.text));
+      days: int.parse(_daysController.text),
+      address: _locationController.text,
+      placeId: _placeIdController.text,
+      rating: double.parse(_ratingController.text),
+    ));
   }
 }
 
@@ -493,22 +381,17 @@ class DiamondClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     final path = Path();
-    path.lineTo(size.width * 0.5, size.height * 0.15);
-    path.lineTo(size.width * 0.35, size.height * 0.4);
-    path.lineTo(0.0, size.height * 0.4);
-    path.lineTo(size.width * 0.25, size.height * 0.55);
-    path.lineTo(size.width * 0.1, size.height * 0.8);
-    path.lineTo(size.width * 0.5, size.height * 0.65);
-    path.lineTo(size.width * 0.9, size.height * 0.8);
-    path.lineTo(size.width * 0.75, size.height * 0.55);
-    path.lineTo(size.width, size.height * 0.4);
-    path.lineTo(size.width * 0.65, size.height * 0.4);
-    path.lineTo(size.width * 0.5, size.height * 0.15);
-
+    final len = size.width;
+    path.lineTo(0, 1 / 4 * len);
+    path.lineTo(1 / 4 * len, 0);
+    path.lineTo(3 / 4 * len, 0);
+    path.lineTo(len, 1 / 4 * len);
+    path.lineTo(1 / 2 * len, len);
+    path.lineTo(0, 1 / 4 * len);
     path.close();
     return path;
   }
 
   @override
-  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
+  bool shouldReclip(CustomClipper<Path> oldClipper) => true;
 }

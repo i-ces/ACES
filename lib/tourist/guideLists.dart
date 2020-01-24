@@ -158,12 +158,12 @@ class GuideListState extends State<GuideListWidget> {
                         subtitle: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: <Widget>[
-                            RatingBarIndicator(
+                            FlutterRatingBarIndicator(
                               rating: snapshot.data[index].rating,
                               itemCount: 5,
                               itemSize: 18.0,
                               physics: NeverScrollableScrollPhysics(),
-                              unratedColor: Colors.amber.withAlpha(50),
+                              emptyColor: Colors.amber.withAlpha(50),
                             ),
                           ],
                         ),

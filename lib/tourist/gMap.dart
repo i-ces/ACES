@@ -160,13 +160,13 @@ class _GMap extends State<GMap> {
                                         children: <Widget>[
                                           Text(snapshot.data[index].rating
                                               .toString()),
-                                          RatingBarIndicator(
+                                          FlutterRatingBarIndicator(
                                             rating: snapshot.data[index].rating,
                                             itemCount: 5,
                                             itemSize: 18.0,
                                             physics:
                                                 NeverScrollableScrollPhysics(),
-                                            unratedColor:
+                                            emptyColor:
                                                 Colors.amber.withAlpha(50),
                                           ),
                                         ],

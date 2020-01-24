@@ -67,7 +67,7 @@ class _PlacesSearch extends State<PlacesSearch> {
                                 builder: (context) =>
                                     NearbyGuide(userLocation))))
               ],
-              backgroundColor: Colors.lightBlue,
+              backgroundColor: Colors.redAccent,
             ),
             body: Column(
               children: <Widget>[
@@ -91,7 +91,7 @@ class _PlacesSearch extends State<PlacesSearch> {
                 SingleChildScrollView(
                   child: Container(
                       height: MediaQuery.of(context).size.height * 0.63,
-                      color: Colors.lightBlue,
+                      color: Colors.redAccent,
                       padding: EdgeInsets.only(top: 20),
                       child: GuidesSearch()),
                 ),

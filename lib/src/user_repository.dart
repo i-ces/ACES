@@ -6,7 +6,7 @@ import 'package:http_parser/http_parser.dart';
 import 'package:mime/mime.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:http/http.dart' as http;
+import 'package:http/http.dart' as https;
 import 'package:meta/meta.dart';
 
 class UserRepository {
@@ -36,11 +36,11 @@ class UserRepository {
       // 'returnSecureToken': true
     };
     try {
-      http.Response response;
+      https.Response response;
 
-      http.Response response2;
+      https.Response response2;
 
-      response = await http.post(
+      response = await https.post(
         'https://4fd81aa6.ngrok.io/api/accounts/login/',
         body: json.encode(authData),
         headers: {'Content-Type': 'application/json'},
@@ -52,7 +52,7 @@ class UserRepository {
         String _headersKey = "Authorization";
         String _headersValue = "Token " + responseData['token'];
 
-        response2 = await http.get(
+        response2 = await https.get(
           'https://4fd81aa6.ngrok.io/api/accounts/flag/',
           headers: {
             _headersKey: _headersValue,
@@ -114,9 +114,10 @@ class UserRepository {
   Future<Map<String, dynamic>> uploadImage(File image,
       {String imagePath}) async {
     final mimeTypeData = lookupMimeType(image.path).split('/');
-    final imageUploadRequest = http.MultipartRequest('POST',
+    print("object");
+    final imageUploadRequest = https.MultipartRequest('POST',
         Uri.parse('https://4fd81aa6.ngrok.io/api/accounts/profilepicture/'));
-    final file = await http.MultipartFile.fromPath(
+    final file = await https.MultipartFile.fromPath(
       'profile_pic',
       image.path,
       contentType: MediaType(
@@ -131,7 +132,7 @@ class UserRepository {
 
     try {
       final streamedResponse = await imageUploadRequest.send();
-      final response = await http.Response.fromStream(streamedResponse);
+      final response = await https.Response.fromStream(streamedResponse);
       if (response.statusCode != 200 && response.statusCode != 201) {
         print('Something went wrong');
         print(json.decode(response.body));
@@ -160,6 +161,7 @@ class UserRepository {
       File image}) async {
     bool hasError = true;
     try {
+      print("object");
       final uploadedData = await uploadImage(image);
       print("called");
       final Map<String, dynamic> profile = {
@@ -183,11 +185,11 @@ class UserRepository {
         'guideprofile': profile,
       };
 
-      await http.post(
+      await https.post(
         'https://4fd81aa6.ngrok.io/api/accounts/guide/signup/',
         body: json.encode(authData),
         headers: {'Content-Type': 'application/json'},
-      ).then((http.Response response) {
+      ).then((https.Response response) {
         final Map<String, dynamic> responseData = json.decode(response.body);
 
         print(response.statusCode);
@@ -231,11 +233,11 @@ class UserRepository {
         'touristprofile': profile,
       };
 
-      await http.post(
+      await https.post(
         'https://4fd81aa6.ngrok.io/api/accounts/tourist/signup/',
         body: json.encode(authData),
         headers: {'Content-Type': 'application/json'},
-      ).then((http.Response response) {
+      ).then((https.Response response) {
         if (response.statusCode != 200 && response.statusCode != 201) {
           throw response.body;
         } else {

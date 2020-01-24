@@ -193,12 +193,12 @@ class _UserProfilePage extends State<UserProfilePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   _buildStatItem("Rating"),
-                  RatingBarIndicator(
+                  FlutterRatingBarIndicator(
                     rating: (widget.model.rating + 0.0),
                     itemCount: 5,
                     itemSize: 18.0,
                     physics: NeverScrollableScrollPhysics(),
-                    unratedColor: Colors.amber.withAlpha(50),
+                    emptyColor: Colors.amber.withAlpha(50),
                   ),
                 ],
               ),

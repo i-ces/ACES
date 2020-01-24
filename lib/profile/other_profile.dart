@@ -60,7 +60,7 @@ class _OtherProfilePage extends State<OtherProfilePage> {
   }
 
   Widget _rating() {
-    return RatingBar(
+    return FlutterRatingBar(
       initialRating: widget.model.rating,
       allowHalfRating: true,
       ignoreGestures: false,
@@ -558,11 +558,12 @@ class _OtherProfilePage extends State<OtherProfilePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   _buildStatItem("Rating"),
-                  RatingBarIndicator(
+                  FlutterRatingBarIndicator(
                     rating: (widget.model.rating + 0.0),
                     itemCount: 5,
                     itemSize: 30.0,
                     physics: NeverScrollableScrollPhysics(),
+                    emptyColor: Colors.grey,
                   ),
                 ],
               ),

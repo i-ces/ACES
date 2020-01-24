@@ -34,11 +34,11 @@ class RatingInformation extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        RatingBarIndicator(
+        FlutterRatingBarIndicator(
           rating: (rating + 0.0),
           itemCount: 5,
           itemSize: 18.0,
-          unratedColor: Colors.grey,
+          emptyColor: Colors.grey,
           physics: NeverScrollableScrollPhysics(),
         ),
       ],
