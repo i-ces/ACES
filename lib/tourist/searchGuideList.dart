@@ -1,3 +1,4 @@
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:ghumnajaam/account_bloc/account_repository.dart';
 import 'package:ghumnajaam/profile/other_profile.dart';
 import 'package:google_maps_webservice/places.dart';

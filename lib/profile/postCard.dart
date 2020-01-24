@@ -77,12 +77,12 @@ class TripModelCard extends StatelessWidget {
             Text(
               post.time == null ? "Moment ago" : post.time,
             ),
-            FlutterRatingBarIndicator(
+            RatingBarIndicator(
               rating: (post.rating + 0.0).toDouble(),
               itemCount: 5,
               itemSize: 18.0,
               physics: NeverScrollableScrollPhysics(),
-              emptyColor: Colors.amber.withAlpha(50),
+              unratedColor: Colors.amber.withAlpha(50),
             ),
           ],
         ),

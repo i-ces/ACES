@@ -45,12 +45,12 @@ class _ReviewPage extends State<ReviewPage> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
-                                FlutterRatingBarIndicator(
+                                RatingBarIndicator(
                                   rating: snapshot.data[index].rating,
                                   itemCount: 5,
                                   itemSize: 18.0,
                                   physics: NeverScrollableScrollPhysics(),
-                                  emptyColor: Colors.amber.withAlpha(50),
+                                  unratedColor: Colors.amber.withAlpha(50),
                                 ),
                               ],
                             ),
