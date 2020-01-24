@@ -7,6 +7,7 @@ class Hirings(models.Model):
     tourist = models.ForeignKey(TouristProfile,on_delete=models.CASCADE)
     guide = models.ForeignKey(GuideProfile,on_delete=models.CASCADE)
     is_approved = models.BooleanField(default=False)
+    days = models.CharField(max_length=30,default=0)
     hiringdetail = models.TextField(default="I want to hire you on this day.")
 
     class Meta:

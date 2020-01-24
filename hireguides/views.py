@@ -47,6 +47,10 @@ class ApproveHireView(APIView):
     def get(self,request):
         hireid = self.request.query_params.get('hireid')
         hire = Hirings.objects.get(id=hireid)
+        income = hire.guide.pricing * 0.8 * hire.days
+        hire.guide.earning = int(income + hire.guide.earning)
+        hire.guide.save()
+        print(hire.guide.earning)
         hire.is_approved = True
         hire.save()
         return Response(hire.id)

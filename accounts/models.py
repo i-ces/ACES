@@ -20,6 +20,7 @@ class GuideProfile(models.Model):
     rating = models.FloatField(default=0.0)
     bio = models.TextField()
     pricing = models.IntegerField(default=1000)
+    earning = models.IntegerField(default=0)
     phone_number = PhoneNumberField()
     location = models.CharField(max_length=400)
     latitude = models.DecimalField(decimal_places=7,max_digits=15)

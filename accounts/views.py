@@ -14,7 +14,7 @@ from django.contrib.gis import measure
 import requests
 
 def SENDSMS(to,message):
-    url = 'http://beta.thesmscentral.com/api/v3/sms?token=PvMofr71KjqsNyS810158AlqFwaCxdIOv0jw&sender=amrit&to={}&message={}'.format(to,message)
+    url = 'http://beta.thesmscentral.com/api/v3/sms?token=fZxKwcV7cOqiURZT1242LB29HJupt0y4qQXf&sender=radiant&to={}&message={}'.format(to,message)
     response = requests.get(url)
     if response.status_code !=200:
         print('Status:',response,'Problem With the request')
