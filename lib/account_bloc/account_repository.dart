@@ -33,6 +33,7 @@ class AccountRepository {
             phone: jsonData[0]['guideprofile']['phone_number'],
             bio: jsonData[0]['guideprofile']['bio'],
             price: jsonData[0]['guideprofile']['pricing'].toString(),
+            earning: jsonData[0]['guideprofile']['earning'].toString(),
             rating: (jsonData[0]['guideprofile']['rating'] + 0.0));
 
         print(_account);

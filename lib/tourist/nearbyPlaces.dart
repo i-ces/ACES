@@ -111,7 +111,7 @@ class _NearbyPlaces extends State<NearbyPlaces> {
       Prediction p = await PlacesAutocomplete.show(
           context: context,
           strictbounds: center == null ? false : true,
-          apiKey: 'jdsbvjkdbvkjbdvjkbvjkbcvjkbsKJdbvkjbvjb',
+          apiKey: 'AIzaSyBfecbv7_Q3gvbif7vhRs7VEmhwgkJxoWI',
           mode: Mode.overlay,
           language: "en",
           location: center == null

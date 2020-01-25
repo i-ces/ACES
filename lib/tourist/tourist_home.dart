@@ -8,6 +8,7 @@ import 'package:ghumnajaam/account_bloc/index.dart';
 import 'package:ghumnajaam/error.dart';
 import 'package:ghumnajaam/tourist/placesSearch.dart';
 import 'package:ghumnajaam/tourist/user_details_page.dart';
+import 'package:ghumnajaam/trek_details/home.dart';
 import 'package:ghumnajaam/trek_details/trek_home.dart';
 import 'package:ghumnajaam/trip/index.dart';
 import 'package:ghumnajaam/trip/trip_bloc.dart';
@@ -112,6 +113,13 @@ class _TouristHome extends State<TouristHome> {
                         curve: Curves.bounceOut,
                       );
                       break;
+                    case 3:
+                      _controller.animateToPage(
+                        3,
+                        duration: Duration(milliseconds: 400),
+                        curve: Curves.bounceOut,
+                      );
+                      break;
                     default:
                   }
                 },
@@ -126,7 +134,8 @@ class _TouristHome extends State<TouristHome> {
                       TripScreen(tripBloc: _tripBloc),
                       PlacesSearch(
                         accountRepository: AccountRepository(),
-                      )
+                      ),
+                      OffHome()
                     ],
                   )),
             ),

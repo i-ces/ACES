@@ -189,7 +189,7 @@ class _GMap extends State<GMap> {
 
   Future<List<Place>> getNearbyPlaces() async {
     http.Response response = await http.get(
-        "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${widget.userLocation.latitude},${widget.userLocation.longitude}&radius=2500&type=${widget.type}&key=jdsbvjkdbvkjbdvjkbvjkbcvjkbsKJdbvkjbvjb",
+        "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${widget.userLocation.latitude},${widget.userLocation.longitude}&radius=2500&type=${widget.type}&key=AIzaSyBfecbv7_Q3gvbif7vhRs7VEmhwgkJxoWI",
         headers: {"Accept": "application/json"});
 
     List data = json.decode(response.body)["results"];

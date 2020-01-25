@@ -488,15 +488,31 @@ class _UserProfilePage extends State<UserProfilePage> {
               Row(
                 children: <Widget>[
                   Padding(
-                    padding: const EdgeInsets.only(right: 8.0),
-                    child: Chip(
-                      label: widget.model.price == null
-                          ? Text(0.toString())
-                          : Text(widget.model.price),
-                      labelStyle: Theme.of(context).textTheme.caption,
-                      backgroundColor: Colors.black12,
-                    ),
-                  ),
+                      padding: const EdgeInsets.only(right: 8.0),
+                      child: Column(children: <Widget>[
+                        Text("Price"),
+                        Chip(
+                          label: widget.model.price == null
+                              ? Text(0.toString())
+                              : Text(widget.model.price),
+                          labelStyle: Theme.of(context).textTheme.caption,
+                          backgroundColor: Colors.black12,
+                        ),
+                      ])),
+                  Padding(
+                      padding: const EdgeInsets.only(right: 8.0),
+                      child: Column(
+                        children: <Widget>[
+                          Text("Earning"),
+                          Chip(
+                            label: widget.model.earning == null
+                                ? Text(0.toString())
+                                : Text(widget.model.earning),
+                            labelStyle: Theme.of(context).textTheme.caption,
+                            backgroundColor: Colors.black12,
+                          ),
+                        ],
+                      )),
                 ],
               )
             ],

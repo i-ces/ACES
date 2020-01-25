@@ -7,6 +7,7 @@ import 'package:ghumnajaam/account_bloc/account_repository.dart';
 import 'package:ghumnajaam/account_bloc/index.dart';
 import 'package:ghumnajaam/error.dart';
 import 'package:ghumnajaam/tourist/user_details_page.dart';
+import 'package:ghumnajaam/trek_details/home.dart';
 import 'package:ghumnajaam/trip/index.dart';
 
 // ignore: must_be_immutable
@@ -96,6 +97,13 @@ class _GuideHome extends State<GuideHome> {
                   curve: Curves.bounceOut,
                 );
                 break;
+              case 2:
+                _controller.animateToPage(
+                  2,
+                  duration: Duration(milliseconds: 400),
+                  curve: Curves.bounceOut,
+                );
+                break;
 
               default:
             }
@@ -107,10 +115,11 @@ class _GuideHome extends State<GuideHome> {
                 height: MediaQuery.of(context).size.height,
                 child: PageView(
                   controller: _controller,
-                  physics: new AlwaysScrollableScrollPhysics(),
+                  physics: new NeverScrollableScrollPhysics(),
                   children: <Widget>[
                     UserDetailsPage(),
                     TripScreen(tripBloc: _tripBloc),
+                    OffHome()
                   ],
                 )),
       ),

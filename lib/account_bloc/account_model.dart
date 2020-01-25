@@ -16,6 +16,7 @@ class AccountModel {
   final double rating;
   final String message;
   final String price;
+  final String earning;
   AccountModel(
       {this.reqId,
       this.message,
@@ -33,5 +34,6 @@ class AccountModel {
       this.profilepic,
       this.tourist,
       this.guide,
+      this.earning,
       this.price});
 }
