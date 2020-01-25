@@ -6,7 +6,7 @@ class HiringSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Hirings
-        fields = ['guide','hiringdetail']
+        fields = ['guide','hiringdetail','days']
 
 class HiresListSerializer(serializers.ModelSerializer):
     tourist = TouristViewSerializer(required=False)
